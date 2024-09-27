@@ -1,0 +1,128 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3373FF;
+    color: white;
+    margin: 25px 120px;
+    border-radius: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    background-color: white;
+    color: #000;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    margin: 20px 120px;
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-buttons button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-buttons button:first-child {
+    background-color: #3373FF;
+    color: white;
+    border-radius: 5px;
+}
+
+.cta-buttons button:last-child {
+    background-color: white;
+    color: #3373FF;
+    border: 2px solid #3373FF;
+    border-radius: 5px;
+}
+
+.cta-buttons button:hover {
+    background-color: #285bc7;
+    color: white;
+}
+
+/* Hero Image */
+.hero-image img {
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
