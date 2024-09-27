@@ -63,7 +63,7 @@ nav ul li a {
     align-items: center;
     justify-content: space-around;
     padding: 60px;
-    background-color: #f4f4f4;
+    
     border-radius: 15px;
     margin: 20px 120px;
 }
@@ -125,4 +125,93 @@ nav ul li a {
 }
 
 
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 60px 120px;
+    margin: 20px 120px;
+}
+
+.skills-container {
+    text-align: center;
+}
+
+.skills-container h3 {
+    color: #3373FF;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.skills-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skills-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.portfolio-btn {
+    background-color: #3373FF;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin-bottom: 40px;
+}
+
+.portfolio-btn:hover {
+    background-color: #285bc7;
+}
+
+/* Skills Card Container Styles */
+.skills-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Shadow effect for the whole box */
+    margin: 0 auto; /* Center the card */
+    max-width: 1000px; /* Set a max-width */
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Skill Item Styles */
+.skill-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 16px;
+    color: #333;
+}
 
