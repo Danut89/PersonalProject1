@@ -6,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+
 /* Header Styles */
 header {
     display: flex;
@@ -56,6 +57,7 @@ nav ul li a {
     font-size: 1.5em;
     margin-right: 10px;
 }
+
 
 /* Hero Section Styles */
 .hero {
@@ -117,13 +119,11 @@ nav ul li a {
     color: white;
 }
 
-/* Hero Image */
 .hero-image img {
     max-width: 450px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 
 /* Skills Section Styles */
@@ -141,6 +141,17 @@ nav ul li a {
     font-size: 18px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.skills-container h3::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: #3373FF;
+    margin-right: 10px;
 }
 
 .skills-container h2 {
@@ -165,53 +176,120 @@ nav ul li a {
     border-radius: 10px;
     transition: background-color 0.3s;
     margin-bottom: 40px;
+    display: inline-block; 
 }
 
 .portfolio-btn:hover {
     background-color: #285bc7;
 }
 
-/* Skills Card Container Styles */
+/* Skills Card Container */
 .skills-card {
     background-color: white;
-    padding: 40px;
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Shadow effect for the whole box */
-    margin: 0 auto; /* Center the card */
-    max-width: 1000px; /* Set a max-width */
+    padding: 50px 60px; 
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    max-width: 1100px;
+    text-align: left; 
 }
 
 /* Skills Grid */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 50px; /* Space between skills items */
+    justify-items: center; /
 }
 
 /* Skill Item Styles */
 .skill-item {
-    background-color: white;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(49, 49, 49, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px; 
 }
 
 .skill-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    background-color: #6089e1; 
+    color: white; 
 }
 
 .skill-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.skill-item p {
+.skill-item span {
     font-size: 16px;
     color: #333;
+}
+
+.skill-item:hover span {
+    color: white;
+}
+
+
+/* About Me Section */
+.about-me-section {
+    padding: 60px 120px;
+    margin: 20px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.about-me-image img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-me-content h3 {
+    color: #3373FF;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.about-me-content h3::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: #3373FF;
+    margin-right: 10px;
+}
+
+.about-me-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-me-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
 }
 
