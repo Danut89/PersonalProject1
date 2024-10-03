@@ -1,278 +1,79 @@
-/* Reset some default styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-
-/* Custom Navbar Styles */
-.navbar-custom {
-    padding: 20px; 
-    margin: 25px 120px; 
+/* Navbar */
+.navbar {
+    background-color: #3366FF;
 }
 
-.bg-primary {
-    border-radius: 100px;
-    padding: 20px;
+.navbar .nav-link:hover {
+    color: #ff9500;
 }
 
-/* Logo styles */
-.navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    color: white; /* Set logo text color */
-}
-
-/* Logo circle */
-.logo-circle {
-    background-color: white;
-    color: #000;
-    border-radius: 50%;
-    width: 60px; /* Adjust size of the circle */
-    height: 60px; 
+/* Hero Section */
+.hero {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    margin-right: 10px;
-    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
 }
 
-.navbar-name {
-    font-size: 1.5em;
-    color: white; 
-    padding-left: 10px;
-}
-
-/* Navbar links */
-.navbar-nav .nav-link {
-    font-size: 1.5em;
-    margin-right: 20px;
-    color: white; /* Set link color */
-}
-
-/* Remove border from toggler button */
-.navbar-toggler {
-    border: none;
-}
-
-
-/* Hero Section Styles */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px;
-    border-radius: 15px;
-    margin: 20px 120px;
-    transform: translateX(150px); /* Shift the hero section 150px to the right */
-}
-
-.hero-content {
-    max-width: 500px;
-    text-align: left;
-}
-
-.hero-content h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    color: #666;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.cta-buttons button {
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.cta-buttons button:first-child {
-    background-color: #3373FF;
-    color: white;
-    border-radius: 5px;
-}
-
-.cta-buttons button:last-child {
-    background-color: white;
-    color: #3373FF;
-    border: 2px solid #3373FF;
-    border-radius: 5px;
-}
-
-.cta-buttons button:hover {
-    background-color: #285bc7;
-    color: white;
-}
-
-
-.hero-image img {
-    max-width: 375px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Skills Section Styles */
-.skills-section {
-    padding: 60px 120px;
-    margin: 20px 120px;
-}
-
-.skills-container {
-    text-align: center;
-}
-
-.skills-container h3 {
-    color: #3373FF;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-}
-
-.skills-container h3::before {
+.hero::before {
     content: "";
-    display: inline-block;
-    width: 50px;
-    height: 3px;
-    background-color: #3373FF;
-    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.skills-container h2 {
-    font-size: 36px;
+.hero .container {
+    position: relative;
+}
+
+/* About Section */
+.about img {
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills h2 {
     margin-bottom: 20px;
-    color: #333;
 }
 
-.skills-container p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #666;
+.skills i {
+    color: #3366FF;
+    transition: transform 0.3s;
 }
 
-.portfolio-btn {
-    background-color: #3373FF;
+.skills i:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #3366FF;
     color: white;
-    border: none;
-    padding: 10px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-    margin-bottom: 40px;
-    display: inline-block; 
+    padding: 20px 0;
 }
 
-.portfolio-btn:hover {
-    background-color: #285bc7;
-}
-
-/* Skills Card Container */
-.skills-card {
-    background-color: white;
-    padding: 50px 60px; 
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    max-width: 1100px;
-    text-align: left; 
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-    gap: 50px; /* Space between skills items */
-    justify-items: center; /
-}
-
-/* Skill Item Styles */
-.skill-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(49, 49, 49, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 200px; 
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    background-color: #6089e1; 
-    color: white; 
-}
-
-.skill-item img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.skill-item span {
-    font-size: 16px;
-    color: #333;
-}
-
-.skill-item:hover span {
+.footer a {
     color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-
-/* About Me Section */
-.about-me-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px; 
-    border-radius: 15px; 
-    margin: 20px 120px;
-    transform: translateX(150px); 
+.footer a:hover {
+    color: #ff9500;
 }
-
-/* About Me Image */
-.about-me-image img {
-    max-width: 375px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-/* About Me Content */
-.about-me-content {
-    max-width: 500px;
-    text-align: left;
-    margin-left: -150px;
-}
-
-.about-me-content h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-me-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-}
-
