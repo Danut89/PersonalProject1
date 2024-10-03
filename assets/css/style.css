@@ -7,29 +7,33 @@
 }
 
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Custom Navbar Styles */
+.navbar-custom {
+    padding: 20px; 
+    margin: 25px 120px; 
+}
+
+.bg-primary {
+    border-radius: 100px;
     padding: 20px;
-    background-color: #3373FF;
-    color: white;
-    margin: 25px 120px;
-    border-radius: 50px;
 }
 
-.logo {
+/* Logo styles */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
     display: flex;
     align-items: center;
+    color: white; /* Set logo text color */
 }
 
+/* Logo circle */
 .logo-circle {
     background-color: white;
     color: #000;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 60px; /* Adjust size of the circle */
+    height: 60px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,24 +42,22 @@ header {
     font-weight: bold;
 }
 
-h1 {
-    margin-left: 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar-name {
     font-size: 1.5em;
-    margin-right: 10px;
+    color: white; 
+    padding-left: 10px;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    font-size: 1.5em;
+    margin-right: 20px;
+    color: white; /* Set link color */
+}
+
+/* Remove border from toggler button */
+.navbar-toggler {
+    border: none;
 }
 
 
@@ -65,9 +67,9 @@ nav ul li a {
     align-items: center;
     justify-content: space-around;
     padding: 60px;
-    
     border-radius: 15px;
     margin: 20px 120px;
+    transform: translateX(150px); /* Shift the hero section 150px to the right */
 }
 
 .hero-content {
@@ -119,8 +121,9 @@ nav ul li a {
     color: white;
 }
 
+
 .hero-image img {
-    max-width: 450px;
+    max-width: 375px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -238,51 +241,31 @@ nav ul li a {
 
 /* About Me Section */
 .about-me-section {
-    padding: 60px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px; 
+    border-radius: 15px; 
     margin: 20px 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
+    transform: translateX(150px); 
 }
 
-.about-me-container {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-}
-
+/* About Me Image */
 .about-me-image img {
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 375px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+/* About Me Content */
 .about-me-content {
-    max-width: 600px;
+    max-width: 500px;
     text-align: left;
-}
-
-.about-me-content h3 {
-    color: #3373FF;
-    font-size: 18px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-}
-
-.about-me-content h3::before {
-    content: "";
-    display: inline-block;
-    width: 50px;
-    height: 3px;
-    background-color: #3373FF;
-    margin-right: 10px;
+    margin-left: -150px;
 }
 
 .about-me-content h2 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 20px;
     color: #333;
 }
