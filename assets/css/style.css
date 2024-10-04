@@ -433,6 +433,7 @@ body {
     padding: 60px; /* Increased padding */
     margin: 0 auto;
     max-width: 1200px; /* Increased width */
+    margin-bottom: 100px;
 }
 
 .projects-title {
@@ -523,7 +524,7 @@ body {
 }
 
 .project-tag:hover {
-    background-color: var(--accent-color);
+    background-color: var(--highlight-color);
 }
 
 .project-card h5 {
@@ -553,8 +554,8 @@ body {
 }
 
 .project-card button:hover {
-    background-color: var(--white-color); /* Change background color on hover */
-    color: #000; /* Ensure text remains visible on hover */
+    background-color: var(--accent-color); /* Change background color on hover */
+    color: #fff; /* Ensure text remains visible on hover */
     transform: scale(1.05); /* Button scaling on hover */
 }
 
