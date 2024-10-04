@@ -175,7 +175,7 @@ body {
 
 /* About Section */
 .about-me {
-    padding: 400px 0 !important; 
+    padding: 450px 0 !important; 
     background: var(--background-color);
     text-align: center;
     position: relative;
@@ -190,48 +190,27 @@ body {
     left: 50%;
     width: 1100px;
     height: 1100px;
-    background: radial-gradient(circle at center, rgba(43, 41, 41, 0.3), rgba(0, 0, 0, 0.05));
+    background: radial-gradient(circle at center, rgba(43, 41, 41, 0.15), rgba(0, 0, 0, 0.05));
     opacity: 0.3;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 1;
 }
 
-/* Small Decorative Circles */
-.about-me .circle {
-    position: absolute;
-    border-radius: 50%;
-    background: var(--accent-color);
-    opacity: 0.4;
-    z-index: 1;
+/* Highlight Text Styling */
+.highlight-text {
+    color: var(--accent-color); /* Use the accent color for emphasis */
+    font-weight: bold;
+    background: linear-gradient(135deg, rgba(245, 203, 92, 0.2), rgba(245, 203, 92, 0.1));
+    padding: 2px 4px;
+    border-radius: 5px;
 }
 
-/* Circle Positions */
-.about-me .circle-1 {
-    width: 150px;
-    height: 150px;
-    top: 15%;
-    left: 20%;
-}
-
-.about-me .circle-2 {
-    width: 100px;
-    height: 100px;
-    top: 60%;
-    left: 75%;
-}
-
-.about-me .circle-3 {
-    width: 80px;
-    height: 80px;
-    top: 35%;
-    left: 85%;
-}
 
 /* Profile Image Styling */
 .about-me img {
     border-radius: 50%;
-    max-width: 450px;
+    max-width: 400px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     border: 10px solid rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -455,7 +434,7 @@ body {
     padding: 50px;
     text-align: center;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 .projects-title {
@@ -484,7 +463,6 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
     color: var(--text-color);
-    text-align: left;
 }
 
 .projects-description {
@@ -492,17 +470,17 @@ body {
     color: var(--text-color);
     margin-bottom: 30px;
     font-size: 18px;
-    text-align: left;
 }
 
+/* Project Card Styling */
 .project-card {
     background-color: var(--background-color);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
+    position: relative;
 }
 
 .project-card:hover {
@@ -512,19 +490,54 @@ body {
     color: var(--highlight-color);
 }
 
+/* Project Image Overlay */
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
 .project-card img {
-    border-radius: 10px;
     transition: transform 0.3s;
 }
 
 .project-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 15px;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Overlay Button */
+.btn-overlay {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
 }
 
 .project-card h5 {
     font-family: var(--font-primary);
     color: var(--highlight-color);
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -533,22 +546,7 @@ body {
     font-family: var(--font-secondary);
     color: var(--text-color);
     margin-top: 10px;
-}
-
-.project-card button {
-    background-color: var(--secondaccent-color);
-    color: var(--highlight-color);
-    border-radius: 5px;
-    padding: 10px 20px;
     font-size: 16px;
-    margin-top: 15px;
-    transition: background-color 0.3s;
-    border: none;
-}
-
-.project-card button:hover {
-    background-color: var(--accent-color);
-    color: var(--highlight-color);
 }
 
 /* Responsive Design */
@@ -561,30 +559,3 @@ body {
         padding: 15px;
     }
 }
-
-/* Footer */
-.footer {
-    background-color: var(--muted-blue);
-    color: var(--white-color);
-    padding: 20px 0;
-}
-
-.footer a {
-    color: var(--white-color);
-    text-decoration: none;
-    margin: 0 10px;
-    size: 20px;
-}
-
-.footer a:hover {
-    color: var(--accent-color) !important;
-}
-
-.footer a i {
-    font-size: 30px;
-}
-
-
-
-
-

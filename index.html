@@ -128,11 +128,6 @@
 
  <!-- About Section -->
 <section id="about" class="about-me py-5">
-    <!-- Decorative Circles -->
-    <div class="circle circle-1"></div>
-    <div class="circle circle-2"></div>
-    <div class="circle circle-3"></div>
-    
     <div class="container">
         <div class="row align-items-center">
             <!-- Profile Image -->
@@ -142,9 +137,9 @@
             <!-- About Content -->
             <div class="col-md-6">
                 <h2 class="about-title">About Me</h2>
-                <div class="separator"></div>
+                <div class="separator"></div> <!-- Separator Line -->
                 <p class="about-description">
-                    I am a dedicated full-stack developer with experience in front-end and back-end technologies. I create modern, responsive websites that align with business goals. Let's collaborate to build something amazing!
+                    I am a <span class="highlight-text">dedicated full-stack developer</span> with experience in <span class="highlight-text">front-end</span> and <span class="highlight-text">back-end</span> technologies. I create <span class="highlight-text">modern, responsive</span> websites that align with business goals. Let's collaborate to build something <span class="highlight-text">amazing</span>!
                 </p>
                 <!-- Download Resume Button -->
                 <button class="btn btn-primary mt-3">
@@ -154,7 +149,6 @@
         </div>
     </div>
 </section>
-
 
 
 
@@ -171,32 +165,44 @@
                     Here are some of the projects I have worked on. Each project showcases my skills and dedication to creating quality web solutions.
                 </p>
             </div>
-            <div class="row">
+            <div class="row gx-5">
                 <!-- Project 1 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="project-card">
-                        <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 1" class="img-fluid mb-3 rounded">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 1" class="img-fluid mb-3 rounded">
+                            <div class="project-overlay">
+                                <button class="btn btn-overlay">View Project</button>
+                            </div>
+                        </div>
                         <h5>PROJECT ONE</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
-                        <button class="btn">View Project</button>
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="project-card">
-                        <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 2" class="img-fluid mb-3 rounded">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 2" class="img-fluid mb-3 rounded">
+                            <div class="project-overlay">
+                                <button class="btn btn-overlay">View Project</button>
+                            </div>
+                        </div>
                         <h5>PROJECT TWO</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
-                        <button class="btn">View Project</button>
                     </div>
                 </div>
                 <!-- Project 3 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="project-card">
-                        <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 3" class="img-fluid mb-3 rounded">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 3" class="img-fluid mb-3 rounded">
+                            <div class="project-overlay">
+                                <button class="btn btn-overlay">View Project</button>
+                            </div>
+                        </div>
                         <h5>PROJECT THREE</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
-                        <button class="btn">View Project</button>
                     </div>
                 </div>
             </div>
@@ -204,24 +210,6 @@
     </div>
 </section>
 
-
-
-   <!-- Footer Section -->
-<footer class="footer text-white py-4">
-    <div class="container">
-        <div class="row d-flex justify-content-between align-items-center">
-            <div class="col-md-6 mb-3 mb-md-0 text-md-start">
-                <p class="mb-0">&copy; 2024 Danut Grigore. All rights reserved.</p>
-            </div>
-            
-            <div class="col-md-6 text-md-end">
-                <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
