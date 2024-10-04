@@ -424,17 +424,15 @@ body {
 .projects {
     padding: 100px 0;
     background-color: var(--background-color);
-    text-align: left;
 }
 
 .projects-box {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(207, 219, 213, 0.9), rgba(74, 111, 165, 0.9)); /* Gradient with slight transparency */
     border-radius: 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-    padding: 50px;
-    text-align: center;
+    padding: 60px; /* Increased padding */
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1200px; /* Increased width */
 }
 
 .projects-title {
@@ -445,6 +443,7 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -463,6 +462,8 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
     color: var(--text-color);
+    text-align: left;
+    position: relative;
 }
 
 .projects-description {
@@ -470,74 +471,65 @@ body {
     color: var(--text-color);
     margin-bottom: 30px;
     font-size: 18px;
+    text-align: left
 }
 
-/* Project Card Styling */
 .project-card {
-    background-color: var(--background-color);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    margin-bottom: 20px;
     overflow: hidden;
-    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     background-color: var(--muted-blue);
     color: var(--highlight-color);
 }
 
-/* Project Image Overlay */
-.project-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
 .project-card img {
+    border-radius: 10px;
     transition: transform 0.3s;
+    margin-bottom: 20px; /* Added space between image and title */
 }
 
 .project-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+/* Tags Styling */
+.project-tags {
     display: flex;
     justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between tags */
+    margin-bottom: 15px; /* Spacing before the project title */
 }
 
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-/* Overlay Button */
-.btn-overlay {
+.project-tag {
     background-color: var(--accent-color);
     color: var(--white-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: var(--font-secondary);
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.project-tag:hover {
+    background-color: var(--accent-color);
 }
 
 .project-card h5 {
     font-family: var(--font-primary);
     color: var(--highlight-color);
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -546,7 +538,46 @@ body {
     font-family: var(--font-secondary);
     color: var(--text-color);
     margin-top: 10px;
+    margin-bottom: 20px; /* Adjusted spacing before button */
+}
+
+/* View Project Button */
+.project-card button {
+    background: var(--text-color);
+    color: #ffffff; /* Set text color to white for better contrast */
+    border-radius: 50px;
+    padding: 10px 20px;
     font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+}
+
+.project-card button:hover {
+    background-color: var(--white-color); /* Change background color on hover */
+    color: #000; /* Ensure text remains visible on hover */
+    transform: scale(1.05); /* Button scaling on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: #000000; /* Change footer text color to black */
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #000000; /* Set social icons color to black */
+    text-decoration: none;
+    margin: 0 10px;
+    size: 20px;
+}
+
+.footer a:hover {
+    color: var(--accent-color) !important; /* Change color to accent on hover */
+}
+
+.footer a i {
+    font-size: 30px;
 }
 
 /* Responsive Design */
