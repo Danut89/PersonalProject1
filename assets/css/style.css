@@ -1,13 +1,19 @@
 /* Define CSS variables for colors and fonts */
 :root {
-    --primary-color: #3366FF;
-    --secondary-color: #ff9500;
+    --primary-color: #0e5de6; 
+    --secondary-color: #f2545b; 
     --background-color: #f9f9f9;
     --text-color: #333333;
-    --secondary-text-color: #666666;
     --white-color: #ffffff;
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Apply global font styles */
@@ -17,63 +23,58 @@ body {
     color: var(--text-color);
 }
 
-
-
-
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-outline-light {
-    color: var(--white-color);
-    border-color: var(--white-color);
-}
-
-.btn-primary:hover, .btn-outline-light:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-
 /* Navbar */
 .navbar {
-    background-color: var(--primary-color);
+    background-color: #fff;
+    padding: 20px 0;
 }
 
 .navbar .nav-link {
-    color: var(--white-color);
+    color: #000;
     font-family: var(--font-primary);
     font-size: 24px;
+    margin: 0 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.navbar .nav-link:hover {
-    color: var(--secondary-color) !important;
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: var(--secondary-color); /* Color of the underline */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
 }
 
-/*Logo */
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Logo */
 .logo-circle {
-    width: 60px; 
-    height: 60px; 
-    background-color: white; 
-    color: var(--primary-color); 
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-weight: bold; 
+    font-size: 24px;
+    font-weight: bold;
 }
 
+.navbar .navbar-brand {
+    color: #000;
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
 
 /* Hero Section */
 .hero {
@@ -81,35 +82,70 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
-    color: var(--white-color);
+    color: var(--text-color);
     font-family: var(--font-primary);
-    text-align: center;
-    z-index: 1;
+    text-align: left; /* Align text to the left */
+    padding: 0 20px;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 20px;
 }
 
-.hero h1 {
-    font-family: var(--font-primary);
+.hero-title {
+    font-size: 3rem; /* Adjust size if needed */
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.hero .container {
-    position: relative;
-    z-index: 2;
+.hero-title .highlight {
+    color: #FFC107; /* Yellow color for the highlighted text */
 }
+
+.hero-description {
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+    width: 800px;
+}
+
+.hero-buttons .btn-light {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.hero-buttons .btn-dark {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.hero-buttons .btn-light:hover,
+.hero-buttons .btn-dark:hover {
+    opacity: 0.8;
+    background-color: #f2545b;
+}
+
+.hero-buttons .btn i {
+    margin-right: 5px;
+}
+
+
 
 /* About Section */
 .about-me {
@@ -151,31 +187,26 @@ body {
 
 
 /* Skills Section */
-
-.skills-box {
-    background-color: var(--white-color);
-    border-radius: 30px;
-    box-shadow: 0 8px 30px rgba(9, 0, 250, 0.4); 
-    padding: 50px;
-    text-align: center;
-}
-
 .skills {
     padding: 100px 0;
+    background-image: url('../images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.skills i {
-    color: var(--primary-color);
-    transition: transform 0.3s;
-}
-
-.skills i:hover {
-    transform: scale(1.2);
-    color: var(--secondary-color);
+.skills-box {
+    background: linear-gradient(135deg, #3366FF, #ff9500); /* Gradient background */
+    border-radius: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); 
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .skills-title {
-    color: var(--primary-color);
+    color: #ffc107;
     font-family: var(--font-primary);
     text-transform: uppercase;
     font-size: 18px;
@@ -190,7 +221,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: #ffc107;
     margin-right: 10px;
 }
 
@@ -205,9 +236,52 @@ body {
 
 .skills-description {
     font-family: var(--font-secondary);
-    color: var(--secondary-text-color);
+    color: var(--white-color);
     margin-bottom: 30px;
     font-size: 18px;
+    text-align: left;
+}
+
+/* Skills Grid */
+.skills .row {
+    gap: 20px; /* Space between items */
+    justify-content: center;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8; /* Light gray background */
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.skill-item:hover {
+    transform: scale(1.05); /* Slightly scale the box */
+    background: #d8d8d8; /* Slightly darker background on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Add a more intense shadow on hover */
+}
+
+.skill-item i {
+    color: var(--primary-color);
+    font-size: 2.5rem; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s, color 0.3s; /* Add transition for icon color and scale */
+}
+
+.skill-item:hover i {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    color: var(--secondary-color); /* Change icon color on hover */
+}
+
+.skill-item h5 {
+    margin: 0;
+    font-size: 1rem; /* Adjust font size */
+    color: var(--text-color);
     text-align: left;
 }
 
@@ -225,6 +299,7 @@ body {
 .portfolio-btn:hover {
     background-color: var(--secondary-color) !important;
 }
+
 
 
 /* Projects Section */
