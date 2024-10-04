@@ -12,7 +12,7 @@
 <body>
 
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg">
     <div class="container">
         <!-- Logo and Brand Name -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -52,89 +52,67 @@
 <section id="skills" class="skills">
     <div class="container">
         <div class="skills-box">
-            <div class="row mb-4 text-center">
-                <div class="col-md-8">
-                    <div class="skills-header">
-                        <h3 class="skills-title">MY SKILLS & EXPERTISE</h3>
-                        <h2 class="skills-main-title">Creating, Coding, and Managing Websites</h2>
-                        <p class="skills-description">I take pride in my versatile skill set, honed through countless hours of self-learning and hands-on experience.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-center justify-content-center">
-                    <button class="btn btn-primary portfolio-btn">Portfolio</button>
-                </div>
+            <div class="text-center mb-5">
+                <h3 class="skills-title">MY SKILLS & EXPERTISE</h3>
+                <h2 class="skills-main-title">Creating, Coding, and Managing Websites</h2>
+                <p class="skills-description">I take pride in my versatile skill set, honed through countless hours of self-learning and hands-on experience.</p>
             </div>
-            <div class="row text-center">
-                <!-- 1st Row -->
-                <div class="col-md-3 mb-4">
+            <div class="skills-categories">
+                <!-- Frontend Section -->
+                <div class="skills-category-box">
+                    <h4 class="skills-category"><i class="fas fa-laptop-code"></i> Frontend</h4>
                     <div class="skill-item">
                         <i class="fab fa-html5"></i>
                         <h5>HTML</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fab fa-css3-alt"></i>
                         <h5>CSS</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fab fa-js-square"></i>
                         <h5>JavaScript</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fab fa-react"></i>
                         <h5>React</h5>
                     </div>
                 </div>
-                <!-- 2nd Row -->
-                <div class="col-md-3 mb-4">
+                <!-- Backend Section -->
+                <div class="skills-category-box">
+                    <h4 class="skills-category"><i class="fas fa-server"></i> Backend</h4>
                     <div class="skill-item">
                         <i class="fab fa-node"></i>
                         <h5>Node.js</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fab fa-python"></i>
                         <h5>Python</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fas fa-cube"></i>
                         <h5>Django</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <h5>Git</h5>
-                    </div>
-                </div>
-                <!-- 3rd Row -->
-                <div class="col-md-3 mb-4">
-                    <div class="skill-item">
-                        <i class="fab fa-figma"></i>
-                        <h5>Figma</h5>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fas fa-database"></i>
                         <h5>SQL/NoSQL</h5>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <!-- Tools & Technologies Section -->
+                <div class="skills-category-box">
+                    <h4 class="skills-category"><i class="fas fa-tools"></i> Tools & Technologies</h4>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <h5>Git</h5>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-figma"></i>
+                        <h5>Figma</h5>
+                    </div>
                     <div class="skill-item">
                         <i class="fab fa-js"></i>
                         <h5>TypeScript</h5>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
                     <div class="skill-item">
                         <i class="fas fa-server"></i>
                         <h5>RESTful APIs</h5>
@@ -147,60 +125,67 @@
 
 
 
-    <!-- About Section -->
-    <section id="about" class="about-me py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="assets/images/linkedin-sales-solutions-EI50ZDA-l8Y-unsplash.jpg" alt="About Me" class="img-fluid  shadow-sm">
-                </div>
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p>I am a dedicated full-stack developer with experience in front-end and back-end technologies. I create modern, responsive websites that align with business goals. Let's collaborate to build something amazing!</p>
-                    <button class="btn btn-primary mt-3">Download Resume</button>
-                </div>
+
+   <!-- About Section -->
+<section id="about" class="about-me py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Profile Image -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="undraw_developer_activity_re_39tg.svg" alt="About Me" class="img-fluid rounded-circle shadow">
+            </div>
+            <!-- About Content -->
+            <div class="col-md-6">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-description">
+                    I am a dedicated full-stack developer with experience in front-end and back-end technologies. I create modern, responsive websites that align with business goals. Let's collaborate to build something amazing!
+                </p>
+                <!-- Download Resume Button -->
+                <button class="btn btn-primary mt-3">Download Resume</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
     <!-- Projects Section -->
 <section id="projects" class="projects py-5">
     <div class="container">
-        <div class="projects-box shadow-sm p-5">
-            <div class="row mb-4">
-                <div class="col-md-8">
-                    <div class="projects-header">
-                        <h3 class="projects-title">MY PROJECTS</h3>
-                        <h2 class="projects-main-title">Showcasing My Latest Work</h2>
-                        <p class="projects-description">Here are some of the projects I have worked on. Each project showcases my skills and dedication to creating quality web solutions.</p>
-                    </div>
-                </div>
+        <div class="projects-box">
+            <div class="projects-header mb-4">
+                <h3 class="projects-title">My Projects</h3>
+                <h2 class="projects-main-title">Showcasing My Latest Work</h2>
+                <p class="projects-description">
+                    Here are some of the projects I have worked on. Each project showcases my skills and dedication to creating quality web solutions.
+                </p>
             </div>
             <div class="row">
                 <!-- Project 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="project-card shadow-sm p-3">
+                    <div class="project-card">
                         <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 1" class="img-fluid mb-3 rounded">
-                        <h5>Project One</h5>
+                        <h5>PROJECT ONE</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
-                        <button class="btn btn-primary text-center">View Project</button>
+                        <button class="btn">View Project</button>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="col-md-4 mb-4">
-                    <div class="project-card shadow-sm p-3">
-                        <img src="assets/images/project2.jpg" alt="Project 2" class="img-fluid mb-3 rounded">
-                        <h5>Project Two</h5>
+                    <div class="project-card">
+                        <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 2" class="img-fluid mb-3 rounded">
+                        <h5>PROJECT TWO</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
+                        <button class="btn">View Project</button>
                     </div>
                 </div>
                 <!-- Project 3 -->
                 <div class="col-md-4 mb-4">
-                    <div class="project-card shadow-sm p-3">
-                        <img src="assets/images/project3.jpg" alt="Project 3" class="img-fluid mb-3 rounded">
-                        <h5>Project Three</h5>
+                    <div class="project-card">
+                        <img src="assets/images/Screenshot 2024-10-02 200655.png" alt="Project 3" class="img-fluid mb-3 rounded">
+                        <h5>PROJECT THREE</h5>
                         <p>A brief description of the project goes here. It highlights the main features and technologies used.</p>
+                        <button class="btn">View Project</button>
                     </div>
                 </div>
             </div>
@@ -209,8 +194,9 @@
 </section>
 
 
+
    <!-- Footer Section -->
-<footer class="footer bg-primary text-white py-4">
+<footer class="footer text-white py-4">
     <div class="container">
         <div class="row d-flex justify-content-between align-items-center">
             <div class="col-md-6 mb-3 mb-md-0 text-md-start">
@@ -230,3 +216,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
