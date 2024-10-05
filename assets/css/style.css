@@ -29,21 +29,22 @@ body {
 
 /* Navbar */
 .navbar {
-    padding: 15px 0; /* Slightly reduced padding for a sleeker appearance */
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+    padding: 20px 50px; /* Increased padding */
+    background-color: #4A6FA5; /* Darker background for better contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly more shadow */
 }
 
 .navbar .nav-link {
-    color: var(--text-color); /* Neutral color for better contrast */
     font-family: var(--font-primary);
-    font-size: 20px; /* Slightly smaller font size for a cleaner look */
     font-weight: bold;
     margin: 0 15px;
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
     transition: color 0.3s ease-in-out; /* Smooth color transition */
+    color: #ffffff; /* White color for better contrast on dark background */
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .navbar .nav-link::after {
@@ -55,6 +56,8 @@ body {
     left: 0;
     bottom: 0;
     transition: width 0.3s ease-in-out;
+    color: #F4A261; /* Accent color on hover */
+
 }
 
 .navbar .nav-link:hover {
@@ -69,7 +72,6 @@ body {
 .logo-circle {
     width: 60px;
     height: 60px;
-    background-color: var(--accent-color);
     color: var(--white-color);
     border-radius: 50%;
     display: flex;
@@ -79,41 +81,46 @@ body {
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
     transition: transform 0.3s;
+    background-color: #E27B3F; /* Darker shade of accent color for contrast */
+    margin-left: -30px; /* Pushes logo to the left */
 }
 
 .logo-circle:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.3); /* Slightly enlarge on hover */
 }
 
 .navbar .navbar-brand {
     color: var(--accent-color); /* Match logo color */
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: 10px; /* Add some space between logo and text */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Use a bold weight */
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: 0; /* Align logo to the left */
 }
 
 /* Hero Section */
 .hero {
+    background: linear-gradient(135deg, rgba(207, 219, 213, 0.5), rgba(74, 111, 165, 0.5)); /* Soft gradient */
     height: 90vh; /* Slightly reduced height */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-color);
     font-family: var(--font-primary);
     text-align: left;
-    padding: 0 20px;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+    padding: 0 50px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2); /* Soft inner shadow */
+    color: var(--text-color);
 }
 
 .hero-subtitle {
-    font-size: 1rem;
-    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    padding-left: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-weight: bold;
-    padding-left: 20px;
-    border-left: 5px solid var(--accent-color); /* Updated color for consistency */
+    border-left: 3px solid var(--accent-color); /* Updated border */
 }
 
 .hero-title {
@@ -123,7 +130,7 @@ body {
 }
 
 .hero-title .highlight {
-    color: var(--accent-color); /* Accent color for highlight */
+    color: #E27B3F; /* Darker shade of orange for better contrast */
 }
 
 .hero-description {
@@ -136,35 +143,35 @@ body {
 
 /* Hero Buttons */
 .hero-buttons .btn-light {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
     border: none;
-    border-radius: 50px;
-    padding: 12px 25px;
+    border-radius: 30px;
+    padding: 12px 30px;
     font-size: 1rem;
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    background-color: #4A6FA5; /* Muted blue */
+    color: var(--white-color)
 }
 
 .hero-buttons .btn-dark {
-    background-color: var(--accent-color);
     color: var(--white-color);
     border: none;
-    border-radius: 50px;
-    padding: 12px 25px;
+    border-radius: 30px;
+    padding: 12px 30px;
     font-size: 1rem;
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    background-color: #E27B3F; /* Softer shade of orange */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
 }
 
 .hero-buttons .btn-light:hover,
 .hero-buttons .btn-dark:hover {
     background-color: var(--highlight-color);
-    transform: translateY(-3px); /* Slight lift on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .hero-buttons .btn i {
@@ -199,12 +206,14 @@ body {
 
 /* Highlight Text Styling */
 .highlight-text {
-    color: var(--accent-color); /* Use the accent color for emphasis */
-    font-weight: bold;
+    color: var(--highlight-color); /* Use the accent color for emphasis */
+    font-weight: 600;
     background: linear-gradient(135deg, rgba(245, 203, 92, 0.2), rgba(245, 203, 92, 0.1));
     padding: 2px 4px;
     border-radius: 5px;
 }
+
+
 
 
 /* Profile Image Styling */
@@ -350,16 +359,23 @@ body {
 }
 
 .skills-category-box {
-    background: rgba(255, 255, 255, 0.8); /* Light background for skill category boxes */
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
     flex: 1;
     min-width: 250px;
     margin: 10px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.skills-category-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .skills-category {
@@ -384,6 +400,7 @@ body {
     margin: 10px 0;
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
     height: 50px; /* Set a fixed height to align items */
     width: 100%; /* Make sure all skill items have the same width */
 }
@@ -462,7 +479,7 @@ body {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: var(--text-color);
+    color: var(--white-color);
     text-align: left;
     position: relative;
 }
@@ -517,7 +534,7 @@ body {
     color: var(--white-color);
     border-radius: 15px;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 13px;
     font-family: var(--font-secondary);
     display: inline-block;
     transition: background-color 0.3s;
@@ -559,6 +576,8 @@ body {
     transform: scale(1.05); /* Button scaling on hover */
 }
 
+
+
 /* Footer */
 .footer {
     background-color: var(--primary-color);
@@ -591,3 +610,5 @@ body {
         padding: 15px;
     }
 }
+
+
