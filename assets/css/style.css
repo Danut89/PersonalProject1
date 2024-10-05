@@ -640,3 +640,26 @@ body {
     animation-delay: 0.5s; /* Delay to make it appear smoothly */
 }
 
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it stays on top */
+    background-color: #333533; /* Dark Gray */
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #F4A261; /* Accent Color */
+}
