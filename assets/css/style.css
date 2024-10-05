@@ -2,13 +2,13 @@
 :root {
     --primary-color: #CFDBD5; /* Light Gray */
     --secondary-color: #333533; /* Dark Gray */
-    --accent-color: #F4A261; /* Orange */
-    --secondaccent-color: #90CEA1; /* Green */
+    --accent-color: #F4A261; /* Orange - Primary Accent */
     --background-color: #E8EDDF; /* Off White */
     --highlight-color: #242423; /* Very Dark Gray */
-    --text-color: #333533;  /* Dark Gray */
+    --text-color: #333533; /* Dark Gray */
+    --button-color: #4A6FA5; /* Blue - Primary Button Color */
+    --button-hover-color: #E27B3F; /* Orange - Button Hover State */
     --white-color: #ffffff;
-    --muted-blue: #4A6FA5; /* Muted Blue */
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
 }
@@ -29,20 +29,20 @@ body {
 
 /* Navbar */
 .navbar {
-    padding: 20px 50px; /* Increased padding */
-    background-color: #4A6FA5; /* Darker background for better contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly more shadow */
+    padding: 10px 30px; /* Increased padding */
+    background-color: var(--primary-color); /* Darker background for better contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly more shadow */
 }
 
 .navbar .nav-link {
     font-family: var(--font-primary);
-    font-weight: bold;
+    font-weight: 600;
     margin: 0 15px;
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
     transition: color 0.3s ease-in-out; /* Smooth color transition */
-    color: #ffffff; /* White color for better contrast on dark background */
+    color: var(--highlight-color); /* White color for better contrast on dark background */
     font-size: 18px;
     font-weight: bold;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: var(--accent-color); /* Change text color on hover */
+    color: var(--button-hover-color); /* Change text color on hover */
 }
 
 .navbar .nav-link:hover::after {
@@ -79,7 +79,7 @@ body {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a 3D effect */
     transition: transform 0.3s;
     background-color: #E27B3F; /* Darker shade of accent color for contrast */
     margin-left: -30px; /* Pushes logo to the left */
@@ -90,8 +90,8 @@ body {
 }
 
 .navbar .navbar-brand {
-    color: var(--accent-color); /* Match logo color */
-    font-family: 'Poppins', sans-serif;
+    color: var(--button-hover-color); /* Match logo color */
+    font-family: var(--font-primary);
     font-weight: 700; /* Use a bold weight */
     font-size: 26px;
     font-weight: 700;
@@ -100,23 +100,28 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(207, 219, 213, 0.5), rgba(74, 111, 165, 0.5)); /* Soft gradient */
-    height: 90vh; /* Slightly reduced height */
+    background: linear-gradient(135deg, #E8EDDF, #CFDBD5); /* Gradient background */
+    height: 100vh; /* Slightly reduced height */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: var(--font-primary);
     text-align: left;
     padding: 0 50px;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2); /* Soft inner shadow */
-    color: var(--text-color);
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 150px; /* Adjust the top padding for small screens */
+    }
 }
 
 .hero-subtitle {
     font-size: 0.9rem;
     font-weight: bold;
     font-family: var(--font-secondary);
-    color: var(--text-color);
+    color: var(--highlight-color);
     padding-left: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -127,10 +132,11 @@ body {
     font-size: 3.5rem; /* Slightly larger for more impact */
     font-weight: bold;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .hero-title .highlight {
-    color: #E27B3F; /* Darker shade of orange for better contrast */
+    color: var(--text-color); /* Darker shade of orange for better contrast */
 }
 
 .hero-description {
@@ -151,7 +157,7 @@ body {
     align-items: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    background-color: #4A6FA5; /* Muted blue */
+    background-color: var(--button-color); /* Muted blue */
     color: var(--white-color)
 }
 
@@ -164,13 +170,12 @@ body {
     display: inline-flex;
     align-items: center;
     transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    background-color: #E27B3F; /* Softer shade of orange */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
 }
 
 .hero-buttons .btn-light:hover,
 .hero-buttons .btn-dark:hover {
-    background-color: var(--highlight-color);
+    background-color: var(--button-hover-color);
     transform: translateY(-5px); /* Slight lift on hover */
 }
 
@@ -180,10 +185,13 @@ body {
 }
 
 
+
+
+
 /* About Section */
 .about-me {
     padding: 450px 0 !important; 
-    background: var(--background-color);
+    background: linear-gradient(135deg, #E8EDDF, #CFDBD5); /* Gradient background */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -256,7 +264,7 @@ body {
 
 /* Button Styling */
 .btn-primary {
-    background: linear-gradient(135deg, var(--muted-blue), var(--accent-color));
+    background: linear-gradient(135deg, var(--button-color), var(--button-hover-color));
     border: none;
     padding: 15px 40px;
     font-size: 18px;
@@ -300,7 +308,9 @@ body {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
+    opacity: 0;
+    padding: 100px 50px;
 }
 
 .skills-box {
@@ -383,7 +393,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: var(--accent-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -448,7 +458,7 @@ body {
     border-radius: 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     padding: 60px; /* Increased padding */
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 1200px; /* Increased width */
     margin-bottom: 100px;
 }
@@ -581,12 +591,12 @@ body {
 /* Footer */
 .footer {
     background-color: var(--primary-color);
-    color: #000000; /* Change footer text color to black */
+    color: var(--highlight-color); /* Change footer text color to black */
     padding: 20px 0;
 }
 
 .footer a {
-    color: #000000; /* Set social icons color to black */
+    color: var(--highlight-color); /* Set social icons color to black */
     text-decoration: none;
     margin: 0 10px;
     size: 20px;
@@ -611,4 +621,22 @@ body {
     }
 }
 
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply Animation to the Skills Section */
+.skills {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay to make it appear smoothly */
+}
 
