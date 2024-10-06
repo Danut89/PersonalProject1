@@ -34,6 +34,16 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly more shadow */
 }
 
+/* Apply fixed-top positioning for larger devices */
+@media (min-width: 992px) { /* Adjust the width as needed (e.g., 768px for tablets) */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
 .navbar .nav-link {
     font-family: var(--font-primary);
     font-weight: 600;
@@ -99,6 +109,13 @@ body {
 }
 
 /* Hero Section */
+
+@media (max-width: 768px) {
+    .title-container {
+        margin-bottom: 90px; /* Adjust the top padding for small screens */
+    }
+}
+
 .hero {
     background: linear-gradient(135deg, #E8EDDF, #CFDBD5); /* Gradient background */
     height: 100vh; /* Slightly reduced height */
@@ -128,6 +145,13 @@ body {
     border-left: 3px solid var(--accent-color); /* Updated border */
 }
 
+/* Hide the welcome text on mobile devices */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .hero-subtitle {
+        display: none;
+    }
+}
+
 .hero-title {
     font-size: 3.5rem; /* Slightly larger for more impact */
     font-weight: bold;
@@ -145,6 +169,12 @@ body {
     margin-bottom: 30px;
     max-width: 700px; /* Adjusted width for better responsiveness */
     line-height: 1.6; /* Improved readability */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .hero-title, .hero-description {
+        font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    }
 }
 
 /* Hero Buttons */
@@ -177,6 +207,12 @@ body {
 .hero-buttons .btn-dark:hover {
     background-color: var(--button-hover-color);
     transform: translateY(-5px); /* Slight lift on hover */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .btn-light, .btn-dark {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
 }
 
 .hero-buttons .btn i {
@@ -399,6 +435,7 @@ body {
     justify-content: center;
     gap: 10px;
 }
+
 
 .skill-item {
     display: flex;
@@ -663,3 +700,11 @@ body {
 #scrollToTopBtn:hover {
     background-color: #F4A261; /* Accent Color */
 }
+
+/* Default navbar styles (for mobile and small devices) */
+.navbar {
+    position: static; /* or relative, based on your preference */
+    width: 100%;
+    z-index: 10; /* Keeps the navbar on top */
+}
+
