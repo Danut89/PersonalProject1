@@ -490,26 +490,24 @@ body {
     background-color: var(--white-color);
 }
 
-.projects-box {
-    background: linear-gradient(135deg, rgba(207, 219, 213, 0.9), rgba(74, 111, 165, 0.9)); /* Gradient with slight transparency */
-    border-radius: 30px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-    margin-bottom: 100px;
-    max-width: 1200px;
-    padding: 50px;
-    margin: 0 auto;
+.projects-box .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the cards */
+    gap: 40px; /* Increased gap for better spacing */
+    margin-right: ;
 }
 
 .projects-title {
     color: var(--highlight-color);
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     text-transform: uppercase;
-    font-size: 18px;
     font-weight: bold;
     display: flex;
     align-items: center;
     text-align: left;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .projects-title::before {
@@ -526,170 +524,158 @@ body {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: var(--white-color);
+    color: var(--text-color);
     text-align: left;
-    position: relative;
 }
 
 .projects-description {
     font-family: var(--font-secondary);
     color: var(--text-color);
     margin-bottom: 30px;
-    font-size: 18px;
-    text-align: left
+    font-size: 16px;
+    text-align: left;
 }
 
+/* Project Card Styling */
 .project-card {
-    overflow: hidden;
     position: relative;
-    cursor: pointer;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 400px; /* Set a fixed height for consistency */
-    margin: 20px; /* Adds spacing between cards */
-    background: linear-gradient(135deg, rgba(207, 219, 213, 0.7), rgba(255, 255, 255, 0.9)); /* Subtle gradient */
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Adjust the height as needed */
+    max-width: 550px; /* Adjust the max-width to match the example */
+    margin: 20px auto; /* Center the cards */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Project Overlay */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Image */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Project Overlay (Visible on Hover) */
 .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    color: #fff;
     opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between; /* Space elements from top to bottom */
     padding: 20px;
-    transition: opacity 0.3s;
 }
 
 .project-card:hover .project-overlay {
     opacity: 1; /* Show overlay on hover */
-    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(0);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-    background-color: var(--muted-blue);
-    color: var(--highlight-color);
+/* Project Information */
+.project-info {
+    text-align: left; /* Align text to the left */
 }
 
-/* Hover Overlay */
-.project-card .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-placeholder {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-    color: var(--highlight-color);
-    opacity: 1;
-    transition: opacity 0.3s;
+/* Project Title */
+.project-overlay h5 {
     font-family: var(--font-primary);
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; /* Set to white for visibility */
+    font-size: 1.5rem;
 }
 
-/* Hide placeholder on hover */
-.project-card:hover .project-placeholder {
-    opacity: 0;
+/* Project Description */
+.project-overlay p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-.project-image-container {
-    position: relative;
+/* Project Tags */
+.project-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.project-card-link {
-    text-decoration: none; /* Remove underline from the link */
-    color: inherit; /* Inherit color from parent */
-}
-
-.project-card img {
-    border-radius: 10px;
-    transition: transform 0.3s;
-    margin-bottom: 20px; /* Added space between image and title */
-    width: 100%;
-    height: 200px; /* Consistent height for images */
-    object-fit: cover; /* Maintain aspect ratio */
-    display: block;
-    height: auto;
-    
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Tags Styling */
 .project-tag {
     background-color: var(--highlight-color);
-    color: #fff;
-    border-radius: 12px;
     padding: 5px 10px;
-    margin: 5px;
+    border-radius: 12px;
     font-size: 0.8rem;
+    color: #fff;
     font-family: var(--font-secondary);
-    display: inline-block;
+}
+
+/* Project Button */
+.project-button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-.project-tag:hover {
-    background-color: var(--highlight-color);
+.project-button:hover {
+    background-color: var(--button-hover-color);
 }
 
-.project-card h5 {
-    font-family: var(--font-primary);
-    color: var(--highlight-color);
-    margin-top: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+.live-site-button {
+    background-color: var(--button-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Align button to the bottom left */
 }
 
-.project-card p {
-    font-family: var(--font-secondary);
-    color: var(--text-color);
-    margin: 10px 0;
+.live-site-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
 }
 
-.project-overlay h5,
-.project-overlay p {
-    margin: 10px 0;
-    color: #fff; /* Set to white for visibility */
-    z-index: 20; /* Ensure text is above the overlay */
+/* Project Media Queries */
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .project-card {
+        flex: 0 1 calc(50% - 40px); /* Two cards per row */
+    }
+}
+
+@media (min-width: 1201px) {
+    .project-card {
+        flex: 0 1 calc(33.33% - 40px); /* Three cards per row */
+    }
 }
 
 
