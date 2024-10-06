@@ -780,3 +780,15 @@ body {
 
 
 
+/* Initial hidden state for sections */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px); /* Move elements further down */
+    transition: opacity 2s ease-out, transform 2s ease-out; /* Longer transition */
+}
+
+/* Active class to reveal the content */
+.fade-in-section.active {
+    opacity: 1;
+    transform: translateY(0); /* Reset the transform */
+}
