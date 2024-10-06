@@ -1,13 +1,13 @@
 /* Define CSS variables for colors and fonts */
 :root {
-    --primary-color: #CFDBD5; /* Light Gray */
-    --secondary-color: #333533; /* Dark Gray */
-    --accent-color: #F4A261; /* Orange - Primary Accent */
-    --background-color: #E8EDDF; /* Off White */
-    --highlight-color: #242423; /* Very Dark Gray */
-    --text-color: #333533; /* Dark Gray */
-    --button-color: #4A6FA5; /* Blue - Primary Button Color */
-    --button-hover-color: #E27B3F; /* Orange - Button Hover State */
+    --primary-color: #CFDBD5;
+    --secondary-color: #333533;
+    --accent-color: #F4A261;
+    --background-color: #E8EDDF;
+    --highlight-color: #242423;
+    --text-color: #333533;
+    --button-color: #4A6FA5;
+    --button-hover-color: #E27B3F;
     --white-color: #ffffff;
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
@@ -540,15 +540,21 @@ body {
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     height: 400px; /* Set a fixed height for consistency */
     margin: 20px; /* Adds spacing between cards */
-    
+    background: linear-gradient(135deg, rgba(207, 219, 213, 0.7), rgba(255, 255, 255, 0.9)); /* Subtle gradient */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
 }
 
 /* Project Overlay */
@@ -558,19 +564,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    color: #fff;
-    opacity: 0; /* Hide overlay initially */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 20px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .project-card:hover .project-overlay {
     opacity: 1; /* Show overlay on hover */
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .project-card:hover {
@@ -603,6 +611,27 @@ body {
     opacity: 1;
 }
 
+.project-placeholder {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+    opacity: 1;
+    transition: opacity 0.3s;
+    font-family: var(--font-primary);
+}
+
+/* Hide placeholder on hover */
+.project-card:hover .project-placeholder {
+    opacity: 0;
+}
+
+.project-image-container {
+    position: relative;
+}
+
 .project-card-link {
     text-decoration: none; /* Remove underline from the link */
     color: inherit; /* Inherit color from parent */
@@ -615,6 +644,8 @@ body {
     width: 100%;
     height: 200px; /* Consistent height for images */
     object-fit: cover; /* Maintain aspect ratio */
+    display: block;
+    height: auto;
     
 }
 
@@ -654,22 +685,11 @@ body {
     margin: 10px 0;
 }
 
-/* View Project Button */
-.project-card button {
-    background: var(--text-color);
-    color: #ffffff; /* Set text color to white for better contrast */
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    border: none;
-    margin-top: 10px;
-}
-
-.project-card button:hover {
-    background-color: var(--accent-color); /* Change background color on hover */
-    color: #fff; /* Ensure text remains visible on hover */
-    transform: scale(1.05); /* Button scaling on hover */
+.project-overlay h5,
+.project-overlay p {
+    margin: 10px 0;
+    color: #fff; /* Set to white for visibility */
+    z-index: 20; /* Ensure text is above the overlay */
 }
 
 
