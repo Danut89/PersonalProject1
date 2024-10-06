@@ -10,25 +10,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Scroll to Top Button
+// Get the button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-// Show the button when user scrolls down 100px
-window.onscroll = function () {
+// Show the button when the user scrolls down
+window.onscroll = function() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTopBtn.style.display = 'block';
+        scrollToTopBtn.classList.add('fade-in');
+        scrollToTopBtn.style.display = 'flex';
     } else {
         scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.classList.remove('fade-in');
     }
 };
 
 // Scroll to the top when the button is clicked
-scrollToTopBtn.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+scrollToTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 
 
 // Function to check and add 'active' class to fade-in elements

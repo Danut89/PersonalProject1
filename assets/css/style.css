@@ -148,7 +148,7 @@ body {
 /* Hide the welcome text on mobile devices */
 @media (max-width: 768px) { /* Adjust the max-width as needed */
     .hero-subtitle {
-        display: none;
+        
     }
 }
 
@@ -733,28 +733,52 @@ body {
 }
 
 /* Scroll to Top Button */
+/* Go to Top Button */
 #scrollToTopBtn {
     display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99; /* Ensure it stays on top */
-    background-color: #333533; /* Dark Gray */
-    color: var(--white-color);
+    z-index: 99; /* Keep it on top */
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4A6FA5, #E27B3F); /* Gradient background */
+    color: #fff;
     border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow for a 3D effect */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Hover effect */
 #scrollToTopBtn:hover {
-    background-color: #F4A261; /* Accent Color */
+    transform: translateY(-5px) scale(1.1); /* Slightly lift and enlarge on hover */
+    background: linear-gradient(135deg, #E27B3F, #4A6FA5); /* Reverse gradient on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More shadow on hover */
 }
+
+/* Optional: Fade-in animation when button appears */
+#scrollToTopBtn.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Default navbar styles (for mobile and small devices) */
 .navbar {
