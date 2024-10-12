@@ -67,11 +67,11 @@ body {
     position: absolute;
     width: 0;
     height: 2px; /* Thinner underline for a more elegant look */
-    background-color: var(--accent-color); /* Accent color for the underline */
+    background-color: var(--button-hover-color); /* Accent color for the underline */
     left: 0;
     bottom: 0;
     transition: width 0.3s ease-in-out;
-    color: #F4A261; /* Accent color on hover */
+    color: var(--button-hover-color); /* Accent color on hover */
 
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .logo-circle:hover {
-    background-color: #F5CB5C; /* Subtle gold or another accent color */
+    background-color: var(--button-hover-color); /* Subtle gold or another accent color */
     transform: scale(1.3);
     color: #242423; /* Dark text when hovered */
 }
@@ -157,7 +157,7 @@ body {
     color: #242423; /* Darker color for better contrast */
     margin-bottom: 20px;
     text-transform: uppercase;
-    border-left: 4px solid #F5CB5C; /* Existing border-left for subtitle */
+    border-left: 4px solid var(--accent-color); /* Existing border-left for subtitle */
     padding-left: 15px;
 }
 
@@ -173,7 +173,7 @@ body {
 }
 
 .hero-title .highlight {
-    color: #F4A261; /* Darker shade of orange for better contrast */
+    color: var(--button-hover-color); /* Darker shade of orange for better contrast */
 }
 
 .hero-description {
@@ -214,7 +214,7 @@ body {
 
 /* Button hover state */
 .hero-buttons .btn:hover {
-    border: 2px solid var(--accent-color); /* Keep the border consistent */
+    border: 2px solid var(--button-hover-color); /* Keep the border consistent */
     transform: translateY(-5px); /* Slight lift on hover */
     background-color: var(--white-color);
     color: var(--highlight-color);
@@ -802,7 +802,7 @@ body {
     z-index: 99; /* Keep it on top */
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #4A6FA5, #E27B3F); /* Gradient background */
+    background: var(--button-hover-color);
     color: #fff;
     border: none;
     border-radius: 50%;
