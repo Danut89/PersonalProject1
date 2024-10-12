@@ -30,7 +30,7 @@ body {
 /* Navbar */
 .navbar {
     padding: 10px 30px; /* Increased padding */
-    background-color: var(--primary-color); /* Darker background for better contrast */
+   
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly more shadow */
     margin-left: auto; /* Pushes the nav links to the right */
     display: flex;
@@ -130,97 +130,91 @@ body {
     }
 }
 
+/* Hero Section Styles */
 .hero {
-    background: linear-gradient(135deg, #E8EDDF, #CFDBD5); /* Gradient background */
-    height: 100vh; /* Slightly reduced height */
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF); /* Gradient with orange and neutral */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-primary);
-    text-align: left;
+    text-align: center;
     padding: 0 50px;
-    color: var(--highlight-color);
-    margin-bottom: 30px; /* Add space between sections */
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 150px; /* Adjust the top padding for small screens */
-    }
-}
-
-.hero-subtitle {
-    letter-spacing: 0.1em; /* Slightly spaced out */
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: var(--font-secondary);
-    color: #242423; /* Darker color for better contrast */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    border-left: 4px solid var(--accent-color); /* Existing border-left for subtitle */
-    padding-left: 15px;
+    color: #333533; /* Dark color */
 }
 
 .hero-title {
-    font-size: 3.7rem; /* Slightly larger for more impact */
-    letter-spacing: 0.05em; /* Increased letter spacing for clarity */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #242423;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2A2D34; /* Dark navy */
+    margin-bottom: 0.5rem;
 }
 
-.hero-title .highlight {
-    color: var(--button-hover-color); /* Darker shade of orange for better contrast */
+.hero-title .last-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--button-hover-color); /* Orange accent */
 }
 
-.hero-description {
-    color: var(--text-color);
-    margin-bottom: 30px;
-    max-width: 700px; /* Adjusted width for better responsiveness */
-    font-size: 1.3rem;
-    letter-spacing: 0.03em; /* Increased letter spacing for readability */
-    line-height: 1.7; /* Slightly more space between lines */
-    
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #333533;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 }
 
-@media (max-width: 768px) { /* Adjust the max-width as needed */
-    .hero-title, .hero-description {
-        font-size: 1.5rem; /* Adjust the font size for smaller screens */
-    }
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
 }
 
-/* Hero Buttons */
 .hero-buttons .btn {
-    padding: 12px 30px;
+    padding: 12px 25px;
     font-size: 1rem;
     border-radius: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px; /* Fixed width for both buttons */
-    text-align: center;
-    width: 200px;
-    letter-spacing: 0.01em; /* Slightly spaced out text */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
+.hero-buttons .btn-light {
+    background-color: #2A2D34; /* Dark navy */
+    color: white;
+    border: none;
+}
+
+.hero-buttons .btn-light:hover {
+    background-color: #F5CB5C; /* Orange */
+    color: #2A2D34;
+    border: 1px solid #000; /* Orange border on hover */
+}
+
+.hero-buttons .btn-dark {
+    background-color: var(--accent-color); /* Orange */
+    color: white;
+    border: none;
+}
+
+.hero-buttons .btn-dark:hover {
+    background-color: #2A2D34; /* Dark navy */
+    color: #F5CB5C;
+}
+
+/* Adjust icon size and spacing */
 .hero-buttons .btn i {
-    margin-right: 8px;
-    font-size: 1.2rem;
+    margin-right: 10px; /* Space between the icon and text */
+    font-size: 1.2rem;  /* Adjust the icon size */
 }
 
-
-/* Button hover state */
-.hero-buttons .btn:hover {
-    border: 2px solid var(--button-hover-color); /* Keep the border consistent */
-    transform: translateY(-5px); /* Slight lift on hover */
-    background-color: var(--white-color);
-    color: var(--highlight-color);
-    transform: scale(1.05); /* Slight scaling on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
-    font-weight: bold;
+/* Add hover effects to the icon as well */
+.hero-buttons .btn:hover i {
+    transform: translateY(-2px); /* Optional: Add a subtle lift effect */
+    transition: transform 0.3s ease-in-out;
 }
 
 
@@ -402,6 +396,11 @@ body {
     padding: 100px 50px; /* Consistent padding */
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .skills-box {
     background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9)); 
     color: var(--text-color);
@@ -410,8 +409,8 @@ body {
     padding: 50px;
     margin: 0 auto;
     max-width: 1200px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 
 /* Skills Section Titles */
 .skills-title {
@@ -444,6 +443,7 @@ body {
     margin-bottom: 15px;
     text-align: left;
     letter-spacing: 0.8px; /* Added letter spacing */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the title */
 }
 
 /* Skills Description */
@@ -454,6 +454,7 @@ body {
     font-size: 18px;
     text-align: left;
     letter-spacing: 0.5px; /* Improved readability */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for description */
 }
 
 /* Skills Categories */
@@ -466,7 +467,7 @@ body {
 
 /* Skills Category Box */
 .skills-category-box {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -480,16 +481,17 @@ body {
     align-items: center;
 }
 
-/* Adjust margins for mobile devices */
+/* Mobile adjustments */
 @media (max-width: 600px) {
     .skills-category-box {
-        margin: 10px -30px; /* Adjust the margin for mobile devices */
+        margin: 10px 0;
+        padding: 15px;
     }
 }
 
 /* Skills Category Box Hover */
 .skills-category-box:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Subtle lift on hover */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -507,6 +509,13 @@ body {
     letter-spacing: 0.5px; /* Subtle letter spacing for readability */
 }
 
+/* Hide the skills title on mobile */
+@media (max-width: 600px) {
+    .skills-category {
+        display: none; /* Hide titles on mobile */
+    }
+}
+
 /* Individual Skill Item */
 .skill-item {
     display: flex;
@@ -518,14 +527,15 @@ body {
     margin: 10px 0;
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-left: 20px;
     height: 50px; /* Set a fixed height to align items */
     width: 100%; /* Make sure all skill items have the same width */
+    padding-left: 20px;
+    transition: all 0.3s ease;
 }
 
 /* Skill Item Hover */
 .skill-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px) scale(1.05); /* Slight lift */
     background: var(--accent-color);
     color: var(--white-color);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
@@ -534,7 +544,7 @@ body {
 /* Skill Item Icon */
 .skill-item i {
     color: var(--highlight-color);
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Slightly increased icon size */
     margin-right: 10px;
     transition: transform 0.3s, color 0.3s;
 }
@@ -558,6 +568,7 @@ body {
     justify-content: flex-start; /* Align items to the left */
     padding-left: 20px; /* Add padding for spacing */
 }
+
 
 /* Projects Section */
 .projects {
