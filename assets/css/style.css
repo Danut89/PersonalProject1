@@ -289,7 +289,7 @@ body {
 /* About Title */
 .about-title {
     font-family: var(--font-primary);
-    font-size: 38px; /* Slightly reduced */
+    font-size: 36px; /* Slightly reduced */
     font-weight: bold;
     color: var(--highlight-color);
     margin-top: 20px; /* Reduced margin for better alignment */
@@ -374,12 +374,6 @@ body {
     max-width: 1200px;
 }
 
-/* Hide the entire skills section on small devices */
-@media (max-width: 411px) {
-    #skills {
-        display: none;
-    }
-}
 
 /* Skills Section Titles */
 .skills-title {
@@ -398,7 +392,7 @@ body {
 .skills-title::before {
     content: "";
     display: inline-block;
-    width: 50px;
+    width: 40px;
     height: 3px;
     background-color: var(--highlight-color);
     margin-right: 10px;
@@ -448,6 +442,7 @@ body {
     align-items: center;
 }
 
+/* Adjust margins for mobile devices */
 @media (max-width: 600px) {
     .skills-category-box {
         margin: 10px -30px; /* Adjust the margin for mobile devices */
@@ -537,7 +532,6 @@ body {
     flex-wrap: wrap;
     justify-content: center; /* Center align the cards */
     gap: 40px; /* Increased gap for better spacing */
-    margin-right: ;
 }
 
 .projects-title {
@@ -548,14 +542,15 @@ body {
     display: flex;
     align-items: center;
     text-align: left;
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 10px;
+    letter-spacing: 1px; /* Add letter-spacing for better readability */
 }
 
 .projects-title::before {
     content: "";
     display: inline-block;
-    width: 50px;
+    width: 40px;
     height: 3px;
     background-color: var(--highlight-color);
     margin-right: 10px;
@@ -568,14 +563,17 @@ body {
     margin-bottom: 15px;
     color: var(--text-color);
     text-align: left;
+    letter-spacing: 1.2px; /* Enhance letter-spacing for a polished look */
 }
 
 .projects-description {
     font-family: var(--font-secondary);
     color: var(--text-color);
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: left;
+    line-height: 1.6; /* Improve readability */
+    letter-spacing: 0.8px; /* Subtle letter-spacing */
 }
 
 /* Project Card Styling */
@@ -645,6 +643,7 @@ body {
     margin-bottom: 10px;
     color: #fff; /* Set to white for visibility */
     font-size: 1.5rem;
+    letter-spacing: 1px; /* Slight letter-spacing for project titles */
 }
 
 /* Project Description */
@@ -653,6 +652,7 @@ body {
     font-size: 1rem;
     margin-bottom: 15px;
     color: #fff;
+    letter-spacing: 0.5px; /* Improved readability with letter-spacing */
 }
 
 /* Project Tags */
@@ -669,6 +669,7 @@ body {
     font-size: 0.8rem;
     color: #fff;
     font-family: var(--font-secondary);
+    letter-spacing: 0.8px; /* Consistent spacing for tags */
 }
 
 /* Project Button */
