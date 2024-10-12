@@ -27,18 +27,41 @@ body {
     color: var(--text-color);
 }
 
+section {
+    padding: 100px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Or adjust for left alignment */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #333533;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #333533;
+}
+
+
+
+
 /* Navbar */
 .navbar {
-    padding: 10px 30px; /* Increased padding */
-   
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly more shadow */
-    margin-left: auto; /* Pushes the nav links to the right */
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: auto;
     display: flex;
     align-items: center;
 }
 
 /* Apply fixed-top positioning for larger devices */
-@media (min-width: 992px) { /* Adjust the width as needed (e.g., 768px for tablets) */
+@media (min-width: 992px) {
     .navbar {
         position: fixed;
         top: 0;
@@ -48,35 +71,33 @@ body {
 }
 
 .navbar .nav-link {
-    font-family: var(--font-primary);
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin: 0 15px;
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
-    color: #242423; /* White color for better contrast on dark background */
+    transition: color 0.3s ease-in-out;
+    color: #242423;
     font-size: 20px;
     font-weight: bold;
-    letter-spacing: 0.05em; /* Slightly spaced out text */
+    letter-spacing: 0.05em;
 }
-
 
 .navbar .nav-link::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 2px; /* Thinner underline for a more elegant look */
-    background-color: var(--button-hover-color); /* Accent color for the underline */
+    height: 2px;
+    background-color: var(--button-hover-color);
     left: 0;
     bottom: 0;
     transition: width 0.3s ease-in-out;
-    color: var(--button-hover-color); /* Accent color on hover */
-
+    color: var(--button-hover-color);
 }
 
 .navbar .nav-link:hover {
-    color: var(--button-hover-color); /* Change text color on hover */
+    color: var(--button-hover-color);
 }
 
 .navbar .nav-link:hover::after {
@@ -88,7 +109,7 @@ body {
     display: inline-block;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #333533, #4A6FA5); /* New gradient background */
+    background: linear-gradient(135deg, #333533, #4A6FA5);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     justify-content: center;
@@ -101,7 +122,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Logo Text */
 .logo-container .logo-text {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -123,64 +143,45 @@ body {
     color: transparent;
 }
 
-/* Logo Container */
-.logo-container {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #333533, #4A6FA5);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.logo-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-}
-
-.logo-container:hover {
-    transform: scale(1.1);
-}
-
-
 /* Hero Section */
-
 @media (max-width: 768px) {
     .title-container {
-        margin-bottom: 90px; /* Adjust the top padding for small screens */
+        margin-bottom: 90px;
     }
 }
 
 /* Hero Section Styles */
 .hero {
-    background: linear-gradient(135deg, #F5CB5C, #E8EDDF); /* Gradient with orange and neutral */
-    height: 100vh;
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 50px;
-    color: #333533; /* Dark color */
+    color: #333533;
+    margin-top: 90px;
 }
 
 .hero-title {
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: #2A2D34; /* Dark navy */
+    color: #2A2D34;
     margin-bottom: 0.5rem;
+}
+
+/* Hero Section Title - Grigore Text */
+.hero-title .highlight {
+    color: #F78C50;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title .last-name {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-style: italic;
-    color: var(--button-hover-color); /* Orange accent */
+    color: var(--button-hover-color);
 }
 
 .hero-subtitle {
@@ -209,39 +210,39 @@ body {
 }
 
 .hero-buttons .btn-light {
-    background-color: #2A2D34; /* Dark navy */
+    background-color: #2A2D34;
     color: white;
     border: none;
 }
 
 .hero-buttons .btn-light:hover {
-    background-color: #F5CB5C; /* Orange */
+    background-color: #F5CB5C;
     color: #2A2D34;
-    border: 1px solid #000; /* Orange border on hover */
+    border: 1px solid #000;
 }
 
 .hero-buttons .btn-dark {
-    background-color: var(--accent-color); /* Orange */
+    background-color: var(--accent-color);
     color: white;
     border: none;
 }
 
 .hero-buttons .btn-dark:hover {
-    background-color: #2A2D34; /* Dark navy */
+    background-color: #2A2D34;
     color: #F5CB5C;
 }
 
 /* Adjust icon size and spacing */
 .hero-buttons .btn i {
-    margin-right: 10px; /* Space between the icon and text */
-    font-size: 1.2rem;  /* Adjust the icon size */
+    margin-right: 10px;
+    font-size: 1.2rem;
 }
 
-/* Add hover effects to the icon as well */
 .hero-buttons .btn:hover i {
-    transform: translateY(-2px); /* Optional: Add a subtle lift effect */
+    transform: translateY(-2px);
     transition: transform 0.3s ease-in-out;
 }
+
 
 
 
@@ -430,7 +431,6 @@ body {
 .skills-box {
     background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9)); 
     color: var(--text-color);
-    border-radius: 20px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     padding: 50px;
     margin: 0 auto;
@@ -800,25 +800,35 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--background-color);
-    color: var(--highlight-color); /* Change footer text color to black */
+    background-color: var(--white-color); /* Same as navbar */
+    color: var(--highlight-color); /* Same text color as navbar */
     padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add shadow like navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer a {
-    color: var(--highlight-color); /* Set social icons color to black */
+    color: var(--highlight-color); /* Set social icons color to match text */
     text-decoration: none;
     margin: 0 10px;
-    size: 20px;
 }
 
 .footer a:hover {
-    color: var(--accent-color) !important; /* Change color to accent on hover */
+    color: var(--button-hover-color); /* Change color to accent on hover */
 }
 
 .footer a i {
     font-size: 30px;
 }
+
+.footer-text {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    margin: 0;
+}
+
 
 
 /* Add a small accent separator between sections */
@@ -854,7 +864,7 @@ body {
     z-index: 99; /* Keep it on top */
     width: 60px;
     height: 60px;
-    background: var(--button-hover-color);
+    background: var(--secondary-color);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -886,5 +896,19 @@ body {
 
 
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+}
 
 
