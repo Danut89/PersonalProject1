@@ -304,8 +304,8 @@ body {
     font-size: 18px; /* Slightly smaller for better text balance */
     color: var(--text-color);
     line-height: 1.8;
-    margin: 20px auto 30px; /* Reduced bottom margin */
-    max-width: 700px; /* Reduce for better reading experience */
+    margin: 20px auto 40px; /* Reduced bottom margin */
+    max-width: 800px; /* Reduce for better reading experience */
     display: inline-block;
     z-index: 2;
     position: relative;
@@ -314,11 +314,9 @@ body {
 
 /* Button Styling */
 .btn-primary {
-    background: linear-gradient(135deg, var(--button-color), var(--button-hover-color));
     border: none;
     padding: 12px 30px; /* Reduce padding for a balanced look */
     font-size: 16px; /* Smaller font size for better proportions */
-    border-radius: 50px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     display: inline-flex;
     align-items: center;
@@ -326,28 +324,51 @@ body {
     z-index: 2;
     position: relative;
     letter-spacing: 0.5px; /* Add letter spacing for readability */
+    background: linear-gradient(135deg, #4A6FA5, #E27B3F); /* Gradient */
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-    background: var(--highlight-color);
-    color: var(--white-color);
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    color: var(--highlight-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--accent-color);
 }
 
 .btn-primary i {
-    font-size: 20px; /* Slightly smaller for better icon proportions */
+    margin-right: 10px;
+    font-size: 1.5rem;
 }
 
+
 /* Separator Line */
+
+
 .about-me .separator {
-    width: 80px; /* Slightly reduced width */
-    height: 3px; /* Slightly reduced height */
-    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
-    margin: 15px auto; /* Reduce margin for more compact design */
-    z-index: 2;
-    position: relative;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #F4A261, #333533);
+    margin: 20px auto;
     border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.2);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 
