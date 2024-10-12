@@ -173,7 +173,7 @@ body {
 }
 
 .hero-title .highlight {
-    color: #242423; /* Darker shade of orange for better contrast */
+    color: #F4A261; /* Darker shade of orange for better contrast */
 }
 
 .hero-description {
@@ -220,6 +220,7 @@ body {
     color: var(--highlight-color);
     transform: scale(1.05); /* Slight scaling on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    font-weight: bold;
 }
 
 
@@ -339,6 +340,7 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--accent-color);
+    font-weight: bold;
 }
 
 .btn-primary i {
