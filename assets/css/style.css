@@ -162,6 +162,7 @@ p {
     color: #333533;
     margin-top: 90px;
     flex-direction: column; /* Align content vertically */
+    border-radius: 10px;
 }
 
 .hero-title {
@@ -283,11 +284,12 @@ p {
 
 /* About Section */
 .about-me {
-    padding: 150px 0; /* Reduced padding for balance */
-    background: linear-gradient(135deg, #F5CB5C, #E8EDDF); /* Gradient with orange and neutral */
+    padding: 150px 0;
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 /* Gradient Background */
@@ -307,18 +309,18 @@ p {
 
 /* Highlight Text Styling */
 .highlight-text {
-    color: var(--highlight-color); /* Use the accent color for emphasis */
+    color: var(--highlight-color);
     font-weight: 600;
     background: linear-gradient(135deg, rgba(245, 203, 92, 0.2), rgba(245, 203, 92, 0.1));
     padding: 2px 4px;
     border-radius: 5px;
-    letter-spacing: 0.5px; /* Slight letter spacing for better readability */
+    letter-spacing: 0.5px;
 }
 
 /* Profile Image Styling */
 .about-me img {
     border-radius: 50%;
-    max-width: 350px; /* Slightly reduced for better spacing */
+    max-width: 350px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     border: 10px solid rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -334,47 +336,48 @@ p {
 /* About Title */
 .about-title {
     font-family: var(--font-primary);
-    font-size: 36px; /* Slightly reduced */
+    font-size: 36px;
     font-weight: bold;
     color: var(--highlight-color);
-    margin-top: 20px; /* Reduced margin for better alignment */
+    margin-top: 20px;
     z-index: 2;
     position: relative;
-    letter-spacing: 0.8px; /* Add slight letter spacing */
+    letter-spacing: 0.8px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
 }
 
 /* About Description */
 .about-description {
     font-family: var(--font-secondary);
-    font-size: 18px; /* Slightly smaller for better text balance */
+    font-size: 18px;
     color: var(--text-color);
     line-height: 1.8;
-    margin: 20px auto 40px; /* Reduced bottom margin */
-    max-width: 800px; /* Reduce for better reading experience */
+    margin: 20px auto 40px;
+    max-width: 800px;
     display: inline-block;
     z-index: 2;
     position: relative;
-    letter-spacing: 0.5px; /* Add slight letter spacing */
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Button Styling */
 .btn-primary {
     border: none;
-    padding: 12px 30px; /* Reduce padding for a balanced look */
-    font-size: 16px; /* Smaller font size for better proportions */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    padding: 12px 30px;
+    font-size: 16px;
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Reduced gap between icon and text */
+    gap: 8px;
     z-index: 2;
     position: relative;
-    letter-spacing: 0.5px; /* Add letter spacing for readability */
-    background: linear-gradient(135deg, #4A6FA5, #E27B3F); /* Gradient */
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #4A6FA5, #E27B3F);
     color: #fff;
     padding: 15px 40px;
     border-radius: 30px;
     font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -392,10 +395,7 @@ p {
     font-size: 1.5rem;
 }
 
-
 /* Separator Line */
-
-
 .about-me .separator {
     width: 60px;
     height: 4px;
@@ -426,20 +426,21 @@ p {
 
 /* Skills Section */
 .skills {
-    padding: 150px 0; /* Adjusted padding for better balance */
+    padding: 150px 0;
     opacity: 1;
     padding: 100px 50px; /* Consistent padding */
 }
 
-
+/* Skills Container */
 .skills-box {
-    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9)); 
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9));
     color: var(--text-color);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     padding: 50px;
     margin: 0 auto;
     max-width: 1200px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 20px; /* Added smooth corner for consistency */
 }
 
 /* Skills Section Titles */
@@ -447,13 +448,13 @@ p {
     color: var(--highlight-color);
     font-family: var(--font-primary);
     text-transform: uppercase;
-    font-size: 20px; /* Slightly increased for clarity */
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px; /* Adjusted margin for better spacing */
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     text-align: left;
-    letter-spacing: 0.5px; /* Slight letter spacing for readability */
+    letter-spacing: 0.5px;
 }
 
 .skills-title::before {
@@ -472,8 +473,8 @@ p {
     color: var(--white-color);
     margin-bottom: 15px;
     text-align: left;
-    letter-spacing: 0.8px; /* Added letter spacing */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the title */
+    letter-spacing: 0.8px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Skills Description */
@@ -483,8 +484,8 @@ p {
     margin-bottom: 30px;
     font-size: 18px;
     text-align: left;
-    letter-spacing: 0.5px; /* Improved readability */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for description */
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Skills Categories */
@@ -497,7 +498,7 @@ p {
 
 /* Skills Category Box */
 .skills-category-box {
-    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -511,17 +512,8 @@ p {
     align-items: center;
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-    .skills-category-box {
-        margin: 10px 0;
-        padding: 15px;
-    }
-}
-
-/* Skills Category Box Hover */
 .skills-category-box:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -536,7 +528,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    letter-spacing: 0.5px; /* Subtle letter spacing for readability */
+    letter-spacing: 0.5px;
 }
 
 /* Hide the skills title on mobile */
@@ -557,15 +549,14 @@ p {
     margin: 10px 0;
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 50px; /* Set a fixed height to align items */
-    width: 100%; /* Make sure all skill items have the same width */
+    height: 50px;
+    width: 100%;
     padding-left: 20px;
     transition: all 0.3s ease;
 }
 
-/* Skill Item Hover */
 .skill-item:hover {
-    transform: translateY(-2px) scale(1.05); /* Slight lift */
+    transform: translateY(-2px) scale(1.05);
     background: var(--accent-color);
     color: var(--white-color);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
@@ -574,7 +565,7 @@ p {
 /* Skill Item Icon */
 .skill-item i {
     color: var(--highlight-color);
-    font-size: 1.8rem; /* Slightly increased icon size */
+    font-size: 1.8rem;
     margin-right: 10px;
     transition: transform 0.3s, color 0.3s;
 }
@@ -589,15 +580,24 @@ p {
     margin: 0;
     font-size: 1rem;
     color: var(--text-color);
-    letter-spacing: 0.5px; /* Add slight letter spacing */
+    letter-spacing: 0.5px;
 }
 
 /* Aligning content inside the category boxes */
 .skills-category-box .skill-item {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    padding-left: 20px; /* Add padding for spacing */
+    justify-content: flex-start;
+    padding-left: 20px;
 }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .skills-category-box {
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
+
 
 
 /* Projects Section */
@@ -663,8 +663,8 @@ p {
     cursor: pointer;
     width: 100%; /* Full width of the container */
     height: 400px; /* Adjust the height as needed */
-    max-width: 550px; /* Adjust the max-width to match the example */
-    margin: 20px auto; /* Center the cards */
+    max-width: 550px;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -701,7 +701,7 @@ p {
     transform: translateY(20px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space elements from top to bottom */
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -712,7 +712,7 @@ p {
 
 /* Project Information */
 .project-info {
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 /* Project Title */
@@ -720,7 +720,7 @@ p {
     font-family: var(--font-primary);
     font-weight: bold;
     margin-bottom: 10px;
-    color: #fff; /* Set to white for visibility */
+    color: #fff;
     font-size: 1.5rem;
     letter-spacing: 1px; /* Slight letter-spacing for project titles */
 }
@@ -731,7 +731,7 @@ p {
     font-size: 1rem;
     margin-bottom: 15px;
     color: #fff;
-    letter-spacing: 0.5px; /* Improved readability with letter-spacing */
+    letter-spacing: 0.5px;
 }
 
 /* Project Tags */
@@ -742,13 +742,14 @@ p {
 }
 
 .project-tag {
-    background-color: var(--highlight-color);
+    background-color: #F5CB5C;
     padding: 5px 10px;
     border-radius: 12px;
     font-size: 0.8rem;
-    color: #fff;
+    font-weight: 500;
+    color: var(--highlight-color);
     font-family: var(--font-secondary);
-    letter-spacing: 0.8px; /* Consistent spacing for tags */
+    letter-spacing: 1px;
 }
 
 /* Project Button */
@@ -758,13 +759,16 @@ p {
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .project-button:hover {
     background-color: var(--button-hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
 }
 
+/* Live Site Button */
 .live-site-button {
     background-color: var(--button-color);
     color: var(--white-color);
@@ -772,7 +776,7 @@ p {
     padding: 10px 20px;
     border-radius: 25px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    align-self: flex-start; /* Align button to the bottom left */
+    align-self: flex-start;
 }
 
 .live-site-button:hover {
@@ -802,6 +806,7 @@ p {
 
 
 
+
 /* Footer */
 .footer {
     background-color: var(--white-color); /* Same as navbar */
@@ -811,12 +816,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Stack content vertically */
 }
 
 .footer a {
     color: var(--highlight-color); /* Set social icons color to match text */
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .footer a:hover {
@@ -825,13 +832,50 @@ p {
 
 .footer a i {
     font-size: 30px;
+    transition: transform 0.3s ease; /* Add hover effect on icons */
+}
+
+.footer a:hover i {
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
 }
 
 .footer-text {
     font-family: var(--font-secondary);
     font-size: 16px;
-    margin: 0;
+    margin: 10px 0 5px;
+    text-align: center;
 }
+
+/* Footer Social Links */
+.footer-socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between icons */
+}
+
+.footer-socials a {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: var(--highlight-color);
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform */
+}
+
+.footer-socials a:hover {
+    color: var(--button-hover-color); /* Change icon color on hover */
+    transform: scale(1.2); /* Slight scaling for icons on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .footer-socials a {
+        font-size: 1.3rem; /* Reduce icon size for smaller screens */
+    }
+}
+
 
 
 
@@ -868,7 +912,7 @@ p {
     z-index: 99; /* Keep it on top */
     width: 60px;
     height: 60px;
-    background: var(--secondary-color);
+    background: linear-gradient(135deg, #F4A261, #4A6FA5, #CFDBD5); /* Updated, softer gradient */
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -879,13 +923,25 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif; /* Consistent font */
 }
 
 /* Hover effect */
 #scrollToTopBtn:hover {
     transform: translateY(-5px) scale(1.1); /* Slightly lift and enlarge on hover */
-    background: linear-gradient(135deg, #E27B3F, #4A6FA5); /* Reverse gradient on hover */
+    background: linear-gradient(135deg, #4A6FA5, #F5CB5C, #E8EDDF); /* Updated hover gradient */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More shadow on hover */
+}
+
+/* Icon Styling */
+#scrollToTopBtn i {
+    font-size: 1.5rem; /* Adjust the icon size */
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+#scrollToTopBtn:hover i {
+    transform: translateY(-2px); /* Add slight movement on hover */
 }
 
 
