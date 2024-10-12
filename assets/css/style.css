@@ -359,6 +359,14 @@ body {
     max-width: 1200px;
 }
 
+@media (max-width: 411px) {
+    #skills {
+        display: none; /* Hide the entire skills section */
+    }
+}
+
+
+
 .skills-title {
     color: var(--highlight-color);
     font-family: var(--font-primary);
@@ -418,6 +426,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 600px) {
+    .skills-category-box {
+        margin: 10px -30px; /* Adjust the margin for mobile devices */
+    }
+}
+
 
 .skills-category-box:hover {
     transform: scale(1.05);
