@@ -232,6 +232,21 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .hero-buttons a {
+        margin-bottom: 15px; /* Adjust this value as needed */
+        display: inline-block; /* Ensure buttons stay on top of each other */
+        width: 100%; /* Make buttons take full width on mobile for better UX */
+        text-align: center; /* Center the text inside the buttons */
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Additional space between buttons */
+    }
+}
 
 
 
