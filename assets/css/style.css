@@ -84,43 +84,69 @@ body {
 }
 
 /* Logo */
-.logo-circle {
+.logo-container {
+    display: inline-block;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    background: linear-gradient(135deg, #333533, #4A6FA5); /* New gradient background */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
+
+/* Logo Text */
+.logo-container .logo-text {
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a 3D effect */
-    transition: transform 0.3s;
-    letter-spacing: 0.02em; /* Slightly spaced out text */
-    margin-left: -30px; /* Pushes logo to the left */
-    background-color: #333533; /* Dark Gray or #242423 for Very Dark Gray */
-    color: #ffffff; /* White text for contrast */
+    color: white;
+    font-size: 20px;
 }
 
-.logo-circle:hover {
-    background-color: var(--button-hover-color); /* Subtle gold or another accent color */
-    transform: scale(1.3);
-    color: #242423; /* Dark text when hovered */
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    margin-left: -5px; /* Reduce space between logo and text */
-    padding: 10px 0; /* Ensure consistent padding */
-    letter-spacing: 0.01em; /* Slightly spaced out text */
-}
-
-.navbar .navbar-brand {
-    color: #333533; 
-    font-family: var(--font-primary);
+/* Brand Text */
+.brand-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
     font-weight: 700;
-    font-size: 26px;
 }
+
+.brand-text span:last-child {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(90deg, #F4A261, #4A6FA5);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Logo Container */
+.logo-container {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #333533, #4A6FA5);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
+
 
 /* Hero Section */
 
@@ -249,7 +275,7 @@ body {
 /* About Section */
 .about-me {
     padding: 150px 0; /* Reduced padding for balance */
-    background: linear-gradient(135deg, #E8EDDF, #CFDBD5);
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF); /* Gradient with orange and neutral */
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -774,7 +800,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     color: var(--highlight-color); /* Change footer text color to black */
     padding: 20px 0;
 }
