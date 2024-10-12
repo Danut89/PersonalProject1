@@ -238,8 +238,8 @@ body {
 
 /* About Section */
 .about-me {
-    padding: 300px 0 !important; 
-    background: linear-gradient(135deg, #E8EDDF, #CFDBD5); /* Gradient background */
+    padding: 150px 0; /* Reduced padding for balance */
+    background: linear-gradient(135deg, #E8EDDF, #CFDBD5);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -267,15 +267,13 @@ body {
     background: linear-gradient(135deg, rgba(245, 203, 92, 0.2), rgba(245, 203, 92, 0.1));
     padding: 2px 4px;
     border-radius: 5px;
+    letter-spacing: 0.5px; /* Slight letter spacing for better readability */
 }
-
-
-
 
 /* Profile Image Styling */
 .about-me img {
     border-radius: 50%;
-    max-width: 400px;
+    max-width: 350px; /* Slightly reduced for better spacing */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     border: 10px solid rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -288,41 +286,46 @@ body {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
+/* About Title */
 .about-title {
     font-family: var(--font-primary);
-    font-size: 40px;
+    font-size: 38px; /* Slightly reduced */
     font-weight: bold;
     color: var(--highlight-color);
-    margin-top: 30px;
+    margin-top: 20px; /* Reduced margin for better alignment */
     z-index: 2;
     position: relative;
+    letter-spacing: 0.8px; /* Add slight letter spacing */
 }
 
+/* About Description */
 .about-description {
     font-family: var(--font-secondary);
-    font-size: 20px;
+    font-size: 18px; /* Slightly smaller for better text balance */
     color: var(--text-color);
     line-height: 1.8;
-    margin: 20px auto 40px;
-    max-width: 800px;
+    margin: 20px auto 30px; /* Reduced bottom margin */
+    max-width: 700px; /* Reduce for better reading experience */
     display: inline-block;
     z-index: 2;
     position: relative;
+    letter-spacing: 0.5px; /* Add slight letter spacing */
 }
 
 /* Button Styling */
 .btn-primary {
     background: linear-gradient(135deg, var(--button-color), var(--button-hover-color));
     border: none;
-    padding: 15px 40px;
-    font-size: 18px;
+    padding: 12px 30px; /* Reduce padding for a balanced look */
+    font-size: 16px; /* Smaller font size for better proportions */
     border-radius: 50px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px; /* Reduced gap between icon and text */
     z-index: 2;
     position: relative;
+    letter-spacing: 0.5px; /* Add letter spacing for readability */
 }
 
 .btn-primary:hover {
@@ -333,15 +336,15 @@ body {
 }
 
 .btn-primary i {
-    font-size: 24px;
+    font-size: 20px; /* Slightly smaller for better icon proportions */
 }
 
 /* Separator Line */
 .about-me .separator {
-    width: 100px;
-    height: 4px;
+    width: 80px; /* Slightly reduced width */
+    height: 3px; /* Slightly reduced height */
     background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
-    margin: 20px auto;
+    margin: 15px auto; /* Reduce margin for more compact design */
     z-index: 2;
     position: relative;
     border-radius: 5px;
@@ -353,15 +356,16 @@ body {
 
 
 
+
 /* Skills Section */
 .skills {
-    padding: 100px 0;
+    padding: 150px 0; /* Adjusted padding for better balance */
     opacity: 1;
-    padding: 100px 50px;
+    padding: 100px 50px; /* Consistent padding */
 }
 
 .skills-box {
-    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9)); /* Gradient with slight transparency */
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9)); 
     color: var(--text-color);
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -370,24 +374,25 @@ body {
     max-width: 1200px;
 }
 
+/* Hide the entire skills section on small devices */
 @media (max-width: 411px) {
     #skills {
-        display: none; /* Hide the entire skills section */
+        display: none;
     }
 }
 
-
-
+/* Skills Section Titles */
 .skills-title {
     color: var(--highlight-color);
     font-family: var(--font-primary);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px; /* Slightly increased for clarity */
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
     display: flex;
     align-items: center;
     text-align: left;
+    letter-spacing: 0.5px; /* Slight letter spacing for readability */
 }
 
 .skills-title::before {
@@ -406,16 +411,20 @@ body {
     color: var(--white-color);
     margin-bottom: 15px;
     text-align: left;
+    letter-spacing: 0.8px; /* Added letter spacing */
 }
 
+/* Skills Description */
 .skills-description {
     font-family: var(--font-secondary);
     color: var(--text-color);
     margin-bottom: 30px;
     font-size: 18px;
     text-align: left;
+    letter-spacing: 0.5px; /* Improved readability */
 }
 
+/* Skills Categories */
 .skills-categories {
     display: flex;
     justify-content: space-between;
@@ -423,6 +432,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Skills Category Box */
 .skills-category-box {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
@@ -444,12 +454,13 @@ body {
     }
 }
 
-
+/* Skills Category Box Hover */
 .skills-category-box:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Skills Category Title */
 .skills-category {
     font-family: var(--font-primary);
     font-size: 24px;
@@ -460,9 +471,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    letter-spacing: 0.5px; /* Subtle letter spacing for readability */
 }
 
-
+/* Individual Skill Item */
 .skill-item {
     display: flex;
     align-items: center;
@@ -478,6 +490,7 @@ body {
     width: 100%; /* Make sure all skill items have the same width */
 }
 
+/* Skill Item Hover */
 .skill-item:hover {
     transform: scale(1.05);
     background: var(--accent-color);
@@ -485,6 +498,7 @@ body {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Skill Item Icon */
 .skill-item i {
     color: var(--highlight-color);
     font-size: 1.5rem;
@@ -497,10 +511,12 @@ body {
     color: var(--white-color);
 }
 
+/* Skill Item Text */
 .skill-item h5 {
     margin: 0;
     font-size: 1rem;
     color: var(--text-color);
+    letter-spacing: 0.5px; /* Add slight letter spacing */
 }
 
 /* Aligning content inside the category boxes */
