@@ -31,23 +31,3 @@ scrollToTopBtn.onclick = function() {
 
 
 
-// Function to check and add 'active' class to fade-in elements
-function handleScroll() {
-    const fadeInSections = document.querySelectorAll('.fade-in-section');
-    
-    fadeInSections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        // Adjust this value for earlier/later animation trigger
-        if (sectionTop < windowHeight - 200) { 
-            section.classList.add('active');
-        }
-    });
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
-
-// Trigger the function on page load to show elements already in view
-handleScroll();

@@ -32,6 +32,9 @@ body {
     padding: 10px 30px; /* Increased padding */
     background-color: var(--primary-color); /* Darker background for better contrast */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Slightly more shadow */
+    margin-left: auto; /* Pushes the nav links to the right */
+    display: flex;
+    align-items: center;
 }
 
 /* Apply fixed-top positioning for larger devices */
@@ -52,10 +55,12 @@ body {
     display: inline-block;
     padding-bottom: 5px;
     transition: color 0.3s ease-in-out; /* Smooth color transition */
-    color: var(--highlight-color); /* White color for better contrast on dark background */
-    font-size: 18px;
+    color: #242423; /* White color for better contrast on dark background */
+    font-size: 20px;
     font-weight: bold;
+    letter-spacing: 0.05em; /* Slightly spaced out text */
 }
+
 
 .navbar .nav-link::after {
     content: "";
@@ -82,7 +87,6 @@ body {
 .logo-circle {
     width: 60px;
     height: 60px;
-    color: var(--white-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -91,21 +95,31 @@ body {
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for a 3D effect */
     transition: transform 0.3s;
-    background-color: #E27B3F; /* Darker shade of accent color for contrast */
+    letter-spacing: 0.02em; /* Slightly spaced out text */
     margin-left: -30px; /* Pushes logo to the left */
+    background-color: #333533; /* Dark Gray or #242423 for Very Dark Gray */
+    color: #ffffff; /* White text for contrast */
 }
 
 .logo-circle:hover {
-    transform: scale(1.3); /* Slightly enlarge on hover */
+    background-color: #F5CB5C; /* Subtle gold or another accent color */
+    transform: scale(1.3);
+    color: #242423; /* Dark text when hovered */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: -5px; /* Reduce space between logo and text */
+    padding: 10px 0; /* Ensure consistent padding */
+    letter-spacing: 0.01em; /* Slightly spaced out text */
 }
 
 .navbar .navbar-brand {
-    color: var(--button-hover-color); /* Match logo color */
+    color: #333533; 
     font-family: var(--font-primary);
-    font-weight: 700; /* Use a bold weight */
-    font-size: 26px;
     font-weight: 700;
-    margin-left: 0; /* Align logo to the left */
+    font-size: 26px;
 }
 
 /* Hero Section */
@@ -126,6 +140,7 @@ body {
     text-align: left;
     padding: 0 50px;
     color: var(--highlight-color);
+    margin-bottom: 30px; /* Add space between sections */
 }
 
 @media (max-width: 768px) {
@@ -135,40 +150,40 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 0.9rem;
+    letter-spacing: 0.1em; /* Slightly spaced out */
+    font-size: 1rem;
     font-weight: bold;
     font-family: var(--font-secondary);
-    color: var(--highlight-color);
-    padding-left: 20px;
+    color: #242423; /* Darker color for better contrast */
     margin-bottom: 20px;
     text-transform: uppercase;
-    border-left: 3px solid var(--accent-color); /* Updated border */
-}
-
-/* Hide the welcome text on mobile devices */
-@media (max-width: 768px) { /* Adjust the max-width as needed */
-    .hero-subtitle {
-        
-    }
+    border-left: 4px solid #F5CB5C; /* Existing border-left for subtitle */
+    padding-left: 15px;
 }
 
 .hero-title {
-    font-size: 3.5rem; /* Slightly larger for more impact */
+    font-size: 3.7rem; /* Slightly larger for more impact */
+    letter-spacing: 0.05em; /* Increased letter spacing for clarity */
     font-weight: bold;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: #242423;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
 .hero-title .highlight {
-    color: var(--text-color); /* Darker shade of orange for better contrast */
+    color: #242423; /* Darker shade of orange for better contrast */
 }
 
 .hero-description {
-    font-size: 1.25rem; /* Slightly reduced for balance */
     color: var(--text-color);
     margin-bottom: 30px;
     max-width: 700px; /* Adjusted width for better responsiveness */
-    line-height: 1.6; /* Improved readability */
+    font-size: 1.3rem;
+    letter-spacing: 0.03em; /* Increased letter spacing for readability */
+    line-height: 1.7; /* Slightly more space between lines */
+    
 }
 
 @media (max-width: 768px) { /* Adjust the max-width as needed */
@@ -178,47 +193,44 @@ body {
 }
 
 /* Hero Buttons */
-.hero-buttons .btn-light {
-    border: none;
-    border-radius: 30px;
+.hero-buttons .btn {
     padding: 12px 30px;
     font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    background-color: var(--button-color); /* Muted blue */
-    color: var(--white-color)
-}
-
-.hero-buttons .btn-dark {
-    color: var(--white-color);
-    border: none;
     border-radius: 30px;
-    padding: 12px 30px;
-    font-size: 1rem;
     display: inline-flex;
     align-items: center;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
-}
-
-.hero-buttons .btn-light:hover,
-.hero-buttons .btn-dark:hover {
-    background-color: var(--button-hover-color);
-    transform: translateY(-5px); /* Slight lift on hover */
-}
-
-@media (max-width: 768px) { /* Adjust the max-width as needed */
-    .btn-light, .btn-dark {
-        font-size: 1rem; /* Adjust the font size for smaller screens */
-    }
+    justify-content: center;
+    width: 200px; /* Fixed width for both buttons */
+    text-align: center;
+    width: 200px;
+    letter-spacing: 0.01em; /* Slightly spaced out text */
 }
 
 .hero-buttons .btn i {
     margin-right: 8px;
-    font-size: 1.2rem; /* Adjust icon size */
+    font-size: 1.2rem;
 }
+
+
+/* Button hover state */
+.hero-buttons .btn:hover {
+    border: 2px solid var(--accent-color); /* Keep the border consistent */
+    transform: translateY(-5px); /* Slight lift on hover */
+    background-color: var(--white-color);
+    color: var(--highlight-color);
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .hero-buttons .btn {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+}
+
+
 
 
 
@@ -344,8 +356,7 @@ body {
 /* Skills Section */
 .skills {
     padding: 100px 0;
-    background-color: var(--white-color);
-    opacity: 0;
+    opacity: 1;
     padding: 100px 50px;
 }
 
@@ -717,6 +728,16 @@ body {
     font-size: 30px;
 }
 
+
+/* Add a small accent separator between sections */
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .projects-box {
@@ -728,26 +749,10 @@ body {
     }
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Apply Animation to the Skills Section */
-.skills {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 0.5s; /* Delay to make it appear smoothly */
-}
 
-/* Scroll to Top Button */
+
+
 /* Go to Top Button */
 #scrollToTopBtn {
     display: none; /* Hidden by default */
@@ -777,22 +782,7 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More shadow on hover */
 }
 
-/* Optional: Fade-in animation when button appears */
-#scrollToTopBtn.fade-in {
-    animation: fadeIn 0.5s ease-in-out;
-}
 
-/* Fade-in Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* Default navbar styles (for mobile and small devices) */
@@ -805,15 +795,4 @@ body {
 
 
 
-/* Initial hidden state for sections */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(50px); /* Move elements further down */
-    transition: opacity 2s ease-out, transform 2s ease-out; /* Longer transition */
-}
 
-/* Active class to reveal the content */
-.fade-in-section.active {
-    opacity: 1;
-    transform: translateY(0); /* Reset the transform */
-}
