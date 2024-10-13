@@ -574,12 +574,12 @@ p {
 .timeline-item:hover {
     background-color: rgba(255, 255, 255, 0.8);
     transform: translateX(5px); /* Subtle shift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Add shadow to the item for emphasis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow to the item for emphasis */
 }
 
 /* Timeline Title */
 .timeline-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #333533;
     margin-bottom: 5px;
@@ -589,7 +589,7 @@ p {
 /* Timeline Role */
 .timeline-role {
     font-size: 18px;
-    color: #555555;
+    color: var(--text-color);
     margin-bottom: 5px;
     transition: color 0.3s ease;
 }
