@@ -283,7 +283,7 @@ p {
 /* About Section */
 .about-me {
     padding: 150px 0;
-    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
+    background: var(--background-color);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -599,6 +599,35 @@ p {
     }
 }
 
+@media (max-width: 768px) {
+    .skills-categories {
+        flex-direction: column; /* Stack the categories vertically */
+        align-items: center; /* Center align the categories */
+        gap: 20px; /* Add some space between the categories */
+    }
+
+    .skills-box {
+        padding: 20px; /* Reduce padding for a more compact layout */
+        max-width: 100%; /* Make the skills box take full width */
+    }
+
+    .skill-item {
+        padding: 8px; /* Reduce padding inside the skill items */
+        margin: 10px 0; /* Increase margin between items for more space */
+        font-size: 0.9rem; /* Reduce font size slightly for mobile */
+    }
+
+    .skills-description {
+        font-size: 16px; /* Reduce description font size for readability */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .skills-title,
+    .skills-main-title {
+        text-align: center; /* Ensure titles are centered */
+        font-size: 24px; /* Slightly smaller font size for titles on mobile */
+    }
+}
 
 
 /* Projects Section */
@@ -771,13 +800,15 @@ p {
 
 /* Live Site Button */
 .live-site-button {
-    background-color: var(--button-color);
+    background-color: #0077B5;
     color: var(--white-color);
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     align-self: flex-start;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .live-site-button:hover {
@@ -880,6 +911,21 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+    .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Add some space between the buttons */
+    }
+
+    .contact-btn {
+        width: 100%; /* Make the buttons take up full width */
+        text-align: center; /* Center the text inside the buttons */
+    }
+}
+
+
 /* Github Button */
 .button-github {
     background-color: #FF8C00; /* Github button's color */
@@ -946,22 +992,48 @@ p {
         font-size: 14px;
     }
 
-    .footer-socials a {
+    .footer a i {
         font-size: 1.3rem; /* Reduce icon size for smaller screens */
     }
 }
 
 
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+        padding: 20px 0; /* Ensure there's enough padding on mobile */
+    }
 
+    .footer-text {
+        font-size: 14px; /* Adjust text size for better readability */
+        margin-bottom: 10px;
+    }
 
-/* Add a small accent separator between sections */
-.section-divider {
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-color);
-    margin: 20px 0;
-    border-radius: 2px;
+    .footer a {
+        margin: 0 5px; /* Reduce space between icons */
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    /* For vertical stacking of the icons */
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Space between the icons */
+        margin-top: 10px; /* Add some space above the icons */
+    }
+
+    /* Stack icons vertically if desired */
+    @media (max-width: 480px) {
+        .footer-icons {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
