@@ -435,18 +435,13 @@ p {
 .skills-box {
     border: 2px solid #E27B3F; /* Accent border */
     background: linear-gradient(135deg, #f7f8fa, #dfe3e6); /* Light soft gradient with very neutral tones */
-
-
-
-
     color: #333533; /* Darker text color for better contrast */
-
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     padding: 50px;
     margin: 0 auto;
     max-width: 1200px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 20px; /* Added smooth corner for consistency */
+    border-radius: 10px; /* Added smooth corner for consistency */
 }
 
 /* Skills Section Titles */
@@ -559,6 +554,7 @@ p {
     width: 100%;
     padding-left: 20px;
     transition: all 0.3s ease;
+    border: 1px solid #E27B3F; /* Accent border */
 }
 
 .skill-item:hover {
@@ -668,7 +664,7 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     width: 100%; /* Full width of the container */
-    height: 400px; /* Adjust the height as needed */
+    height: 300px; /* Adjust the height as needed */
     max-width: 550px;
     margin: 20px auto;
     border-radius: 10px;
@@ -978,3 +974,34 @@ p {
 }
 
 
+/* Scroll Down Arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 30px; /* Adjust depending on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px; /* Arrow size */
+    color: #333; /* Arrow color, adjust to your theme */
+    z-index: 10;
+}
+
+.scroll-down a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.scroll-down i {
+    animation: bounce 2s infinite; /* Bouncing animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px); /* Adjust bounce height */
+    }
+    60% {
+        transform: translateY(5px); /* Adjust bounce height */
+    }
+}
