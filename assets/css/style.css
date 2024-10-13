@@ -219,16 +219,14 @@ p {
 }
 
 .hero-buttons .btn-light:hover {
-    background-color: #F5CB5C;
+    background-color: var(--button-hover-color);
     color: #2A2D34;
-    border: 1px solid #000;
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
 }
 
 .hero-buttons .btn-dark {
-    background-color: var(--accent-color);
-    color: var(--highlight-color);
+    background-color: #007aff;
     border: none;
 }
 
@@ -290,6 +288,7 @@ p {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Gradient Background */
@@ -807,6 +806,97 @@ p {
 }
 
 
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--background-color);
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Title */
+.contact-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+/* Contact Text */
+.contact-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Buttons Styling */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button Styling */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    color: #fff;
+}
+
+/* Email Button */
+.button-contact {
+    background-color: #3A86FF;
+}
+
+.button-contact:hover {
+    background-color: #2A5BCC;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* LinkedIn Button */
+.button-linkedin {
+    background-color: #0077B5; /* LinkedIn blue */
+}
+
+.button-linkedin:hover {
+    background-color: #005A8B;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Github Button */
+.button-github {
+    background-color: #FF8C00; /* Github button's color */
+    color: #000;
+}
+
+.button-github:hover {
+    background-color: #E27B3F;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Styling */
+.contact-btn i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
 
 
 /* Footer */
@@ -833,7 +923,7 @@ p {
 }
 
 .footer a i {
-    font-size: 30px;
+    font-size: 2.5rem;
     transition: transform 0.3s ease; /* Add hover effect on icons */
 }
 
@@ -848,24 +938,7 @@ p {
     text-align: center;
 }
 
-/* Footer Social Links */
-.footer-socials {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Add spacing between icons */
-}
 
-.footer-socials a {
-    font-size: 1.5rem; /* Adjust icon size */
-    color: var(--highlight-color);
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform */
-}
-
-.footer-socials a:hover {
-    color: var(--button-hover-color); /* Change icon color on hover */
-    transform: scale(1.2); /* Slight scaling for icons on hover */
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
