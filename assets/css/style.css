@@ -49,8 +49,6 @@ p {
 }
 
 
-
-
 /* Navbar */
 .navbar {
     padding: 10px 30px;
@@ -143,6 +141,7 @@ p {
     color: transparent;
 }
 
+
 /* Hero Section */
 @media (max-width: 768px) {
     .title-container {
@@ -152,7 +151,7 @@ p {
 
 /* Hero Section Styles */
 .hero {
-    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF); 
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -204,7 +203,7 @@ p {
 }
 
 .hero-buttons .btn {
-    padding: 12px 25px;
+    padding: 10px 25px;
     font-size: 1rem;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
@@ -252,16 +251,11 @@ p {
     transform 0.3s ease-in-out;
 }
 
-
-
-
-
 @media (max-width: 768px) { /* Adjust the max-width as needed */
     .hero-buttons .btn {
         font-size: 1rem; /* Adjust the font size for smaller screens */
     }
 }
-
 
 @media (max-width: 768px) {
     .hero-buttons a {
@@ -280,13 +274,199 @@ p {
 }
 
 
+/* Skills Section */
+.skills {
+    padding: 100px 0;
+    opacity: 1;
+}
 
+/* Skills Container */
+.skills-box {
+    border: 2px solid #F4A261; /* Accent border */
+    background: #E8EDDF; /* Consistent soft neutral background */
+    color: #333533; /* Darker text color for better contrast */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Lighter shadow for subtle depth */
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px; /* Consistent smooth corners */
+}
+
+/* Skills Section Titles */
+.skills-title {
+    color: var(--highlight-color);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.skills-title::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--highlight-color);
+    margin-right: 10px;
+}
+
+.skills-main-title {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--text-color); /* Darker text color for consistency */
+    margin-bottom: 15px;
+    text-align: left;
+    letter-spacing: 0.8px;
+}
+
+/* Skills Description */
+.skills-description {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+/* Skills Categories */
+.skills-categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Skills Category Box */
+.skills-category-box {
+    background: #CFDBD5; /* Light neutral green, consistent with palette */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+}
+
+/* Skills Category Title */
+.skills-category {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Consistent dark text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #F4A261; /* Accent border */
+}
+
+.skill-item:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: #F4A261; /* Accent color for hover */
+    color: var(--white-color);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Item Icon */
+.skill-item i {
+    color: var(--highlight-color); /* Use highlight color */
+    font-size: 1.8rem;
+    margin-right: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2);
+    color: var(--white-color);
+}
+
+/* Aligning content inside the category boxes */
+.skills-category-box .skill-item {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .skills-category-box {
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-categories {
+        flex-direction: column; /* Stack the categories vertically */
+        align-items: center; /* Center align the categories */
+        gap: 20px; /* Add some space between the categories */
+    }
+
+    .skills-box {
+        padding: 20px; /* Reduce padding for a more compact layout */
+        max-width: 100%; /* Make the skills box take full width */
+    }
+
+    .skill-item {
+        padding: 8px; /* Reduce padding inside the skill items */
+        margin: 10px 0; /* Increase margin between items for more space */
+        font-size: 0.9rem; /* Reduce font size slightly for mobile */
+    }
+
+    .skills-description {
+        font-size: 16px; /* Reduce description font size for readability */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .skills-title,
+    .skills-main-title {
+        text-align: center; /* Ensure titles are centered */
+        font-size: 24px; /* Slightly smaller font size for titles on mobile */
+    }
+}
 
 
 /* About Section */
 .about-me {
     padding: 150px 0;
-    background: var(--background-color);
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -366,30 +546,32 @@ p {
 /* Button Styling */
 .btn-primary {
     border: none;
-    padding: 12px 30px;
+    padding: 10px 25px;
     font-size: 16px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    
     z-index: 2;
     position: relative;
     letter-spacing: 0.5px;
-    background: linear-gradient(135deg, #4A6FA5, #E27B3F);
-    color: #fff;
     padding: 15px 40px;
     border-radius: 30px;
     font-size: 1rem;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    font-weight: 500;
 }
 
 .btn-primary:hover {
     background: #fff;
     color: var(--highlight-color);
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     border: 2px solid var(--accent-color);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .btn-primary i {
@@ -420,218 +602,57 @@ p {
 }
 
 
-
-
-
-
-
-
-/* Skills Section */
-.skills {
-    padding: 100px 0;
-    opacity: 1;
-    
+/* Title and text improvements */
+.education-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333533;
+    margin-bottom: 20px;
+    letter-spacing: 0.8px;
 }
 
-/* Skills Container */
-.skills-box {
-    border: 2px solid #E27B3F; /* Accent border */
-    background: linear-gradient(135deg, #f7f8fa, #dfe3e6); /* Light soft gradient with very neutral tones */
-    color: #333533; /* Darker text color for better contrast */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    padding: 50px;
-    margin: 0 auto;
-    max-width: 1200px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border-radius: 10px; /* Added smooth corner for consistency */
+/* Education List */
+.education-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
 }
 
-/* Skills Section Titles */
-.skills-title {
-    color: var(--highlight-color);
-    font-family: var(--font-primary);
-    text-transform: uppercase;
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Icon for Education */
+.education-icon {
+    font-size: 24px;
+    color: #F4A261; /* Accent color for icons */
+    margin-right: 15px;
+}
+
+/* Degree Styling */
+.degree {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    letter-spacing: 0.5px;
+    color: #333533;
 }
 
-.skills-title::before {
-    content: "";
-    display: inline-block;
-    width: 40px;
-    height: 3px;
-    background-color: var(--highlight-color);
-    margin-right: 10px;
+/* School and Year Styling */
+.school {
+    font-size: 16px;
+    color: #555555;
+    opacity: 0.8;
 }
 
-.skills-main-title {
-    font-family: var(--font-primary);
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--white-color);
-    margin-bottom: 15px;
-    text-align: left;
-    letter-spacing: 0.8px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+/* Separator */
+.separator {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #F4A261, #333533);
+    margin: 20px auto;
+    border-radius: 5px;
 }
-
-/* Skills Description */
-.skills-description {
-    font-family: var(--font-secondary);
-    color: var(--text-color);
-    margin-bottom: 30px;
-    font-size: 18px;
-    text-align: left;
-    letter-spacing: 0.5px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Skills Categories */
-.skills-categories {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Skills Category Box */
-.skills-category-box {
-    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9));
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1;
-    min-width: 250px;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.skills-category-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Skills Category Title */
-.skills-category {
-    font-family: var(--font-primary);
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    letter-spacing: 0.5px;
-}
-
-/* Hide the skills title on mobile */
-@media (max-width: 600px) {
-    .skills-category {
-        display: none; /* Hide titles on mobile */
-    }
-}
-
-/* Individual Skill Item */
-.skill-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--white-color);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0;
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 50px;
-    width: 100%;
-    padding-left: 20px;
-    transition: all 0.3s ease;
-    border: 1px solid #E27B3F; /* Accent border */
-}
-
-.skill-item:hover {
-    transform: translateY(-2px) scale(1.05);
-    background: var(--accent-color);
-    color: var(--white-color);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Skill Item Icon */
-.skill-item i {
-    color: var(--highlight-color);
-    font-size: 1.8rem;
-    margin-right: 10px;
-    transition: transform 0.3s, color 0.3s;
-}
-
-.skill-item:hover i {
-    transform: scale(1.2);
-    color: var(--white-color);
-}
-
-/* Skill Item Text */
-.skill-item h5 {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--text-color);
-    letter-spacing: 0.5px;
-}
-
-/* Aligning content inside the category boxes */
-.skills-category-box .skill-item {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 20px;
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-    .skills-category-box {
-        margin: 10px 0;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-categories {
-        flex-direction: column; /* Stack the categories vertically */
-        align-items: center; /* Center align the categories */
-        gap: 20px; /* Add some space between the categories */
-    }
-
-    .skills-box {
-        padding: 20px; /* Reduce padding for a more compact layout */
-        max-width: 100%; /* Make the skills box take full width */
-    }
-
-    .skill-item {
-        padding: 8px; /* Reduce padding inside the skill items */
-        margin: 10px 0; /* Increase margin between items for more space */
-        font-size: 0.9rem; /* Reduce font size slightly for mobile */
-    }
-
-    .skills-description {
-        font-size: 16px; /* Reduce description font size for readability */
-        text-align: center; /* Center-align text on smaller screens */
-    }
-
-    .skills-title,
-    .skills-main-title {
-        text-align: center; /* Ensure titles are centered */
-        font-size: 24px; /* Slightly smaller font size for titles on mobile */
-    }
-}
-
 
 /* Projects Section */
 .projects {
@@ -639,8 +660,8 @@ p {
 }
 
 .project-box {
-    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
-    border: none;
+    background: var(--background-color);
+    border: 2px solid #F4A261; /* Accent border */
 }
 
 .projects-box .row {
@@ -831,10 +852,9 @@ p {
 
 
 /* Contact Section */
-
 .contact-section {
     padding: 100px 0;
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
     text-align: center;
     border-radius: 10px;
     margin-bottom: 90px;
@@ -874,11 +894,11 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
     color: #fff;
@@ -920,7 +940,6 @@ p {
     }
 }
 
-
 /* Github Button */
 .button-github {
     background-color: #FF8C00; /* Github button's color */
@@ -936,7 +955,7 @@ p {
 /* Icon Styling */
 .contact-btn i {
     margin-right: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 
@@ -964,7 +983,7 @@ p {
 }
 
 .footer a i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     transition: transform 0.3s ease; /* Add hover effect on icons */
 }
 
@@ -978,7 +997,6 @@ p {
     margin: 10px 0 5px;
     text-align: center;
 }
-
 
 
 /* Responsive Adjustments */
@@ -1028,8 +1046,6 @@ p {
 }
 
 
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .projects-box {
@@ -1040,9 +1056,6 @@ p {
         padding: 15px;
     }
 }
-
-
-
 
 
 /* Go to Top Button */
@@ -1087,15 +1100,12 @@ p {
 }
 
 
-
-
 /* Default navbar styles (for mobile and small devices) */
 .navbar {
     position: static; /* or relative, based on your preference */
     width: 100%;
     z-index: 10; /* Keeps the navbar on top */
 }
-
 
 
 @media (max-width: 768px) {
@@ -1151,3 +1161,24 @@ p {
         display: none; /* Hide the scroll down arrow on mobile */
     }
 }
+
+
+  /* progress bar */
+  #progressBarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thickness of the progress bar */
+    background-color: #f3f3f3; /* Light background color */
+    z-index: 9999; /* On top of all content */
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--button-hover-color); /* The blue color for the progress bar */
+    transition: width 0.1s ease;
+}
+
+
