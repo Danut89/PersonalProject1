@@ -433,9 +433,15 @@ p {
 
 /* Skills Container */
 .skills-box {
-    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9));
-    color: var(--text-color);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid #E27B3F; /* Accent border */
+    background: linear-gradient(135deg, #f7f8fa, #dfe3e6); /* Light soft gradient with very neutral tones */
+
+
+
+
+    color: #333533; /* Darker text color for better contrast */
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     padding: 50px;
     margin: 0 auto;
     max-width: 1200px;
@@ -498,7 +504,7 @@ p {
 
 /* Skills Category Box */
 .skills-category-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.9), rgba(207, 219, 213, 0.9));
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
