@@ -214,16 +214,18 @@ p {
 }
 
 .hero-buttons .btn-light {
-    background-color: #2A2D34;
-    color: white;
+    background-color: var(--accent-color);
+    color: #000;
     border: none;
+    font-weight: 500;
 }
 
 .hero-buttons .btn-light:hover {
     background-color: var(--button-hover-color);
-    color: #2A2D34;
+    color: #000;
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    font-weight: 500;
 }
 
 .hero-buttons .btn-dark {
@@ -633,7 +635,7 @@ p {
 
 /* Projects Section */
 .projects {
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 .project-box {
@@ -829,12 +831,14 @@ p {
 
 
 /* Contact Section */
+
 .contact-section {
     padding: 100px 0;
     background-color: var(--background-color);
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
+    margin-top: 60px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -1139,5 +1143,11 @@ p {
     }
     60% {
         transform: translateY(5px); /* Adjust bounce height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-down {
+        display: none; /* Hide the scroll down arrow on mobile */
     }
 }
