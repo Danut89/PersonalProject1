@@ -163,6 +163,7 @@ p {
     margin-top: 90px;
     flex-direction: column; /* Align content vertically */
     border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
@@ -425,9 +426,9 @@ p {
 
 /* Skills Section */
 .skills {
-    padding: 150px 0;
+    padding: 100px 0;
     opacity: 1;
-    padding: 100px 50px; /* Consistent padding */
+    
 }
 
 /* Skills Container */
@@ -633,14 +634,18 @@ p {
 /* Projects Section */
 .projects {
     padding: 100px 0;
-    background-color: var(--white-color);
+}
+
+.project-box {
+    background: linear-gradient(135deg, #F5CB5C, #E8EDDF);
+    border: none;
 }
 
 .projects-box .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center align the cards */
-    gap: 40px; /* Increased gap for better spacing */
+    gap: 20px; /* Increased gap for better spacing */
 }
 
 .projects-title {
@@ -696,7 +701,8 @@ p {
     max-width: 550px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 .project-card:hover {
@@ -782,21 +788,6 @@ p {
     letter-spacing: 1px;
 }
 
-/* Project Button */
-.project-button {
-    background-color: var(--button-color);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.project-button:hover {
-    background-color: var(--button-hover-color);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
-}
 
 /* Live Site Button */
 .live-site-button {
