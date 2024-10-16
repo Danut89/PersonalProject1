@@ -142,14 +142,9 @@ p {
 }
 
 
-/* Hero Section */
-@media (max-width: 768px) {
-    .title-container {
-        margin-bottom: 90px;
-    }
-}
 
-/* Hero Section Styles */
+
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, #F5CB5C, #E8EDDF); 
     height: 100vh;
@@ -173,7 +168,6 @@ p {
     margin-bottom: 1.5rem; /* Increase spacing below the title */
 }
 
-/* Hero Section Title - Grigore Text */
 .hero-title .highlight {
     color: #F78C50;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
@@ -186,6 +180,11 @@ p {
     color: var(--button-hover-color);
 }
 
+.hero-call-to-action {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 .hero-subtitle {
     font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
@@ -195,83 +194,82 @@ p {
     letter-spacing: 1px;
 }
 
+.hero-description {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555555;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section Buttons */
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Increase gap between buttons */
-    margin-top: 3.5rem; /* More vertical space above the buttons */
+    gap: 20px; /* Adjust gap for consistent space */
+    margin-top: 3.5rem;
 }
 
 .hero-buttons .btn {
-    padding: 10px 25px;
+    padding: 12px 30px; /* Same padding for both buttons */
     font-size: 1rem;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    min-width: 250px; /* Ensure both buttons are the same width */
+    text-align: center;
 }
 
-.hero-buttons .btn-light {
-    background-color: var(--accent-color);
-    color: #000;
-    border: none;
-    font-weight: 500;
-}
-
-.hero-buttons .btn-light:hover {
-    background-color: var(--button-hover-color);
+.hero-buttons .btn-primary {
+    background-color: #F4A261;
     color: #fff;
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
-    font-weight: 500;
 }
 
 .hero-buttons .btn-dark {
     background-color: #007aff;
+    color: #fff;
     border: none;
 }
 
+.hero-buttons .btn-primary:hover, 
 .hero-buttons .btn-dark:hover {
-    background-color: #2A2D34;
-    color: #F5CB5C;
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    background-color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Adjust icon size and spacing */
 .hero-buttons .btn i {
-    margin-right: 10px;
+    margin-right: 10px; /* Ensure space between icon and text */
     font-size: 1.2rem;
 }
 
 .hero-buttons .btn:hover i {
     transform: translateY(-2px);
-    transition:
-    transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) { /* Adjust the max-width as needed */
-    .hero-buttons .btn {
-        font-size: 1rem; /* Adjust the font size for smaller screens */
-    }
-}
-
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    .hero-buttons a {
-        margin-bottom: 15px; /* Adjust this value as needed */
-        display: inline-block; /* Ensure buttons stay on top of each other */
-        width: 100%; /* Make buttons take full width on mobile for better UX */
-        text-align: center; /* Center the text inside the buttons */
-    }
-    
     .hero-buttons {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Additional space between buttons */
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
     }
 }
+
+
+
+
 
 
 /* Skills Section */
@@ -903,7 +901,7 @@ p {
 
 /* Hover effect */
 .live-site-button:hover {
-    background-color: #e69551; /* Slightly darker hover effect */
+    background-color: #000; /* Slightly darker hover effect */
     transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
