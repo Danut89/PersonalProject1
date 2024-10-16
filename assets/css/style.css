@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 /* Apply global font styles */
 body {
     font-family: var(--font-secondary);
@@ -1200,6 +1204,14 @@ p {
     background: linear-gradient(135deg, #4A6FA5, #F5CB5C, #E8EDDF); /* Updated hover gradient */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More shadow on hover */
 }
+
+/* Fade-in class */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+
 
 /* Icon Styling */
 #scrollToTopBtn i {
