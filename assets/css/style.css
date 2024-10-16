@@ -886,16 +886,37 @@ p {
 
 /* Live Site Button */
 .live-site-button {
-    background-color: var(--accent-color); /* Same as your 'Email Me' button */
-    color: #000;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 30px;
+    background-color: #F4A261; /* Match the accent color */
+    color: #ffffff;
+    padding: 8px 20px; /* Similar padding to the hero section button */
+    font-size: 0.85rem; /* Reduced font size */
+    border-radius: 25px; /* Rounded corners */
     border: none;
+    text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
+    margin-top: auto; /* Push the button to the bottom of the card */
+    width: fit-content; /* Keep the button size compact */
+    align-self: center; /* Center the button horizontally */
+    display: block; /* Ensure it takes up its own line */
 }
+
+/* Hover effect */
+.live-site-button:hover {
+    background-color: #e69551; /* Slightly darker hover effect */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .live-site-button {
+        font-size: 0.8rem; /* Slightly smaller on mobile */
+        padding: 8px 16px; /* Adjust padding for mobile */
+    }
+}
+
+
+
 
 .live-site-button:hover {
     background-color: #1E90FF; /* Slightly darker hover effect */
