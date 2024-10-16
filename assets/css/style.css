@@ -1174,7 +1174,6 @@ p {
 
 /* Go to Top Button */
 #scrollToTopBtn {
-    display: none; /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -1306,40 +1305,56 @@ p {
         padding: 10px 0;
     }
 
-    .navbar-brand img {
-        max-width: 50px; /* Adjust logo size */
-        height: auto;
+    .logo-container {
+        max-width: 40px; /* Adjust logo size */
+        height: 40px;
     }
 
     .navbar-brand .logo-text {
-        font-size: 1.2rem; /* Adjust text size */
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .nav-bar .nav-link {
+        font-size: 16px;;
     }
 
     /* Hero Section (Hi, I'm Danut Grigore) */
-    .hero-section {
+    .hero {
         padding: 50px 20px; /* Reduce padding for mobile */
         text-align: center; /* Center the text */
+        height: auto; /* Allow hero to fit content */
+        margin-top: 50px; /* Ensure space below navbar */
     }
 
-    .hero-section h1 {
-        font-size: 2rem; /* Reduce font size */
+    .hero-title {
+        font-size: 2.5rem; /* Adjust font size */
         margin-bottom: 10px;
     }
 
-    .hero-section h2 {
+    .hero-subtitle {
         font-size: 1.5rem; /* Reduce font size for subheading */
     }
 
     /* Improve spacing between elements */
-    .hero-section .hero-text {
-        padding: 0;
-        margin: 0;
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem; /* Adjust margin for better spacing */
+        display: none; /* Hide the description on mobile */
     }
 
     /* Fix button responsiveness */
-    .hero-section .btn-primary {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px; /* Add space between buttons */
+        width: 100%; /* Ensure full width on mobile */
+        padding: 0 20px;
+    }
+
+    .hero-buttons .btn {
         width: 100%; /* Make the button full width on mobile */
         margin-top: 15px;
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust padding */
     }
 
     /* About Me Section */
@@ -1387,9 +1402,13 @@ p {
         text-align: left;
     }
 
+    /* Scroll to Top Button */
     #scrollToTopBtn {
         width: 40px;
         height: 40px;
     }
 }
+
+
+
 
