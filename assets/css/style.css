@@ -221,7 +221,7 @@ p {
 
 .hero-buttons .btn-light:hover {
     background-color: var(--button-hover-color);
-    color: #000;
+    color: #fff;
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
     font-weight: 500;
@@ -424,7 +424,7 @@ p {
 }
 
 
-/* Mobile adjustments */
+/*Skills Mobile adjustments */
 @media (max-width: 600px) {
     .skills-category-box {
         margin: 10px 0;
@@ -554,6 +554,25 @@ p {
     position: relative;
 }
 
+/* Increase space between Education and Experience */
+.education, .experience {
+    margin-bottom: 50px; /* Increase the margin for better separation */
+}
+
+/* Consistent Titles */
+.experience-title, .education-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333; /* Make both titles visually consistent */
+}
+
+/* Add subtle hover effect on role titles */
+.timeline-title:hover, .education-title:hover {
+    color: #F4A261; /* Accent color */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
 /* Timeline Styling */
 .timeline {
     flex: 1;
@@ -679,6 +698,12 @@ p {
 }
 
 /* Button Styling */
+.about-me .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Align center */
+}
+
 .btn-primary {
     margin-top: 20px;
     padding: 10px 25px;
@@ -774,7 +799,6 @@ p {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    
 }
 
 .project-card:hover {
@@ -860,23 +884,43 @@ p {
     letter-spacing: 1px;
 }
 
-
 /* Live Site Button */
 .live-site-button {
-    background-color: #0077B5;
-    color: var(--white-color);
-    border: none;
+    background-color: var(--accent-color); /* Same as your 'Email Me' button */
+    color: #000;
     padding: 10px 20px;
-    border-radius: 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    align-self: flex-start;
     text-decoration: none;
-    font-size: 1rem;
 }
 
 .live-site-button:hover {
-    background-color: var(--button-hover-color);
+    background-color: #1E90FF; /* Slightly darker hover effect */
+    color: #fff;
     transform: scale(1.05);
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    .project-overlay h5 {
+        font-size: 1.2rem; /* Slightly smaller font for mobile */
+    }
+
+    .project-overlay p {
+        font-size: 0.9rem; /* Smaller description text on mobile */
+    }
+
+    .project-tag {
+        font-size: 0.7rem; /* Smaller tags on mobile */
+    }
+
+    .live-site-button {
+        font-size: 0.9rem; /* Smaller button text on mobile */
+        padding: 8px 18px; /* Smaller button padding on mobile */
+    }
 }
 
 /* Project Media Queries */
@@ -885,6 +929,7 @@ p {
         flex: 0 1 100%;
         max-width: 100%;
     }
+    /* Leave the hover overlay for mobile as requested */
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -898,6 +943,7 @@ p {
         flex: 0 1 calc(33.33% - 40px); /* Three cards per row */
     }
 }
+
 
 
 /* Contact Section */
@@ -1230,4 +1276,101 @@ p {
     transition: width 0.1s ease;
 }
 
+
+/* General Styles for Mobile */
+@media (max-width: 768px) {
+    /* Adjust logo size and alignment */
+    .navbar-brand {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .navbar-brand img {
+        max-width: 50px; /* Adjust logo size */
+        height: auto;
+    }
+
+    .navbar-brand .logo-text {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    /* Hero Section (Hi, I'm Danut Grigore) */
+    .hero-section {
+        padding: 50px 20px; /* Reduce padding for mobile */
+        text-align: center; /* Center the text */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Reduce font size */
+        margin-bottom: 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem; /* Reduce font size for subheading */
+    }
+
+    /* Improve spacing between elements */
+    .hero-section .hero-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Fix button responsiveness */
+    .hero-section .btn-primary {
+        width: 100%; /* Make the button full width on mobile */
+        margin-top: 15px;
+    }
+
+    /* About Me Section */
+    .about-me img {
+        max-width: 100%; /* Make image responsive */
+        height: auto;
+        margin: 0 auto; /* Center image on mobile */
+        display: block;
+    }
+
+    .about-me .container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .about-title {
+        text-align: center; /* Center the About Me title */
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .about-description {
+        text-align: center; /* Center text */
+        padding: 0 15px; /* Add padding for readability */
+    }
+
+    /* Education and Experience Sections */
+    .row {
+        flex-direction: column; /* Stack education and experience vertically */
+    }
+
+    .education-title, .experience-title {
+        text-align: center; /* Center titles */
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .education-list, .timeline {
+        padding: 0 20px; /* Add padding for better layout */
+    }
+
+    /* Adjust the timeline for mobile */
+    .timeline-item {
+        padding-left: 15px;
+    }
+
+    .timeline-date {
+        text-align: left;
+    }
+
+    #scrollToTopBtn {
+        width: 40px;
+        height: 40px;
+    }
+}
 
